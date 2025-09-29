@@ -14,7 +14,9 @@
       "Bash(npm install:*)",
       "Bash(rm:*)",
       "Bash(vercel:*)",
-      "WebFetch(domain:wisesolutions-projects.github.io)"
+      "WebFetch(domain:wisesolutions-projects.github.io)",
+      "Bash(git mv:*)",
+      "Bash(npx vercel:*)"
     ],
     "deny": [],
     "ask": []
