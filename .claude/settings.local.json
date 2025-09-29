@@ -20,7 +20,8 @@
       "Bash(npx surge:*)",
       "Bash(node:*)",
       "Bash(./deploy.bat)",
-      "WebFetch(domain:cha-de-bebe-baby-monteiro.surge.sh)"
+      "WebFetch(domain:cha-de-bebe-baby-monteiro.surge.sh)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
