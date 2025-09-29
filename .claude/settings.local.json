@@ -16,7 +16,11 @@
       "Bash(vercel:*)",
       "WebFetch(domain:wisesolutions-projects.github.io)",
       "Bash(git mv:*)",
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(npx surge:*)",
+      "Bash(node:*)",
+      "Bash(./deploy.bat)",
+      "WebFetch(domain:cha-de-bebe-baby-monteiro.surge.sh)"
     ],
     "deny": [],
     "ask": []
