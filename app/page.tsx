@@ -568,10 +568,10 @@ export default function BabyShowerPage() {
       </div>
 
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
         .cookie-regular {
-          font-family: "Pacifico", cursive !important;
+          font-family: "Cookie", cursive !important;
           font-weight: 400;
           font-style: normal;
         }

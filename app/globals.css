@@ -25,10 +25,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 .cookie-regular {
-  font-family: "Pacifico", cursive;
+  font-family: "Cookie", cursive;
   font-weight: 400;
   font-style: normal;
 }
