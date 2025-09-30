@@ -1,4 +1,4 @@
-# Template para Projetos em projetos.wisesolutions.uk
+# Template para Projetos em projects.wisesolutions.uk
 
 ## Configuração Next.js para Domínio Customizado
 
@@ -41,7 +41,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Add CNAME
-        run: echo 'projetos.wisesolutions.uk' > out/CNAME
+        run: echo 'projects.wisesolutions.uk' > out/CNAME
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -52,18 +52,18 @@ jobs:
 ## Estrutura de Pastas Sugerida
 
 ```
-projetos.wisesolutions.uk/
+projects.wisesolutions.uk/
 ├── nome-do-projeto/          ← URL final
 └── outro-projeto/
 ```
 
 ## Arquivos Obrigatórios
 - `.nojekyll` (para evitar Jekyll)
-- `CNAME` com "projetos.wisesolutions.uk"
+- `CNAME` com "projects.wisesolutions.uk"
 - GitHub Actions workflow
 
 ## Checklist para Novo Projeto
 - [ ] Criar repositório: wisesolutions-projects/nome-do-projeto
 - [ ] Configurar GitHub Pages (Settings > Pages > Source: GitHub Actions)
 - [ ] Adicionar workflow de deploy
-- [ ] Testar com projetos.wisesolutions.uk/nome-do-projeto
+- [ ] Testar com projects.wisesolutions.uk/nome-do-projeto
