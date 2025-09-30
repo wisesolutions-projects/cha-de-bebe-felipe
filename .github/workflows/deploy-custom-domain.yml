@@ -33,8 +33,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Add CNAME to output
-        run: cp CNAME out/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
