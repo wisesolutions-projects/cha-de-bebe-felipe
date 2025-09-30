@@ -29,8 +29,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Use custom config for build
-        run: cp next.config.custom.ts next.config.ts
 
       - name: Build
         run: npm run build
