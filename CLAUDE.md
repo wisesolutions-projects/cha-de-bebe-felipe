@@ -60,6 +60,10 @@ jobs:
 - 🎯 Test deployment with WebFetch to verify functionality
 - 🎯 Implement webhook integration for user activity tracking
 - 🎯 Create sophisticated animations with GPU acceleration (`transform-gpu`)
+- 🎯 **Z-index layering**: Always set decorative elements (balloons, clouds) to lower z-index than content
+  - Decorations container: `z-0`
+  - Content: `z-20`
+  - Prevents visual overlap on mobile devices
 
 ### Technologies Used Successfully
 - Next.js 15 + TypeScript + Tailwind CSS v4
@@ -156,6 +160,40 @@ wisesolutions-projects.github.io/
 - **User experience**: URL stays on custom domain
 - **Technical solution**: Iframe with loading animation
 
+### Development Workflow Best Practices
+- ✅ **Local development FIRST**: Always use `npm run dev` to test changes locally
+- ✅ **Test on localhost**: Verify all functionality at `http://localhost:3000`
+- ✅ **Build locally**: Run `npm run build` to catch errors before deployment
+- ✅ **Deploy only when approved**: Push to GitHub only after changes are confirmed working
+- ✅ **Auto-deployment**: GitHub Actions handles deployment automatically on push
+- 🎯 **Dual config approach**:
+  - Development: No basePath needed for localhost
+  - Production: basePath configured in next.config.ts
+  - Next.js handles this automatically based on environment
+
+### CSS and Styling Lessons
+- ✅ **Font loading**: Google Fonts via `@import` in globals.css works reliably
+- ✅ **Custom classes**: Define font classes AFTER Tailwind to prevent override
+- ✅ **Z-index hierarchy**: Establish clear layering system:
+  - `z-0`: Background decorations
+  - `z-5`: Secondary decorative elements
+  - `z-10`: Tertiary elements
+  - `z-20`: Main content
+  - `z-50`: Overlays (modals, confetti)
+- ✅ **Mobile-first**: Test on mobile viewport early and often
+- ✅ **Responsive design**: Use Tailwind breakpoints (md:, lg:) consistently
+
+### Common Issues & Solutions
+**Problem**: Decorative elements overlap text on mobile
+- **Solution**: Proper z-index hierarchy with content at higher z-index than decorations
+
+**Problem**: Custom fonts not loading
+- **Solution**: Import in globals.css AFTER Tailwind, use `!important` in custom class
+
+**Problem**: Changes not showing on deployed site
+- **Solution**: Check GitHub Actions workflow status, wait 1-2 minutes for CDN cache
+
 ---
 *Last updated: 2025-09-30 - Baby Shower Project COMPLETED*
 *Multi-repository architecture with URL preservation ESTABLISHED*
+*Development workflow and styling best practices DOCUMENTED*
