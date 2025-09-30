@@ -21,7 +21,11 @@
       "Bash(node:*)",
       "Bash(./deploy.bat)",
       "WebFetch(domain:cha-de-bebe-baby-monteiro.surge.sh)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(gh auth:*)",
+      "WebFetch(domain:projetos.wisesolutions.uk)",
+      "Bash(nslookup:*)",
+      "WebFetch(domain:projects.wisesolutions.uk)"
     ],
     "deny": [],
     "ask": []
