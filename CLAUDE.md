@@ -162,18 +162,37 @@ wisesolutions-projects.github.io/
 
 ### Development Workflow Best Practices
 - ✅ **Local development FIRST**: Always use `npm run dev` to test changes locally
-- ✅ **Test on localhost**: Verify all functionality at `http://localhost:3000`
+- ✅ **Test on localhost**: Verify all functionality at `http://localhost:3000` (or whatever port)
 - ✅ **Build locally**: Run `npm run build` to catch errors before deployment
 - ✅ **Deploy only when approved**: Push to GitHub only after changes are confirmed working
 - ✅ **Auto-deployment**: GitHub Actions handles deployment automatically on push
-- 🎯 **Dual config approach**:
-  - Development: No basePath needed for localhost
-  - Production: basePath configured in next.config.ts
-  - Next.js handles this automatically based on environment
+- 🎯 **Environment-based config** (CRITICAL):
+  ```typescript
+  const isProd = process.env.NODE_ENV === 'production';
+  const nextConfig: NextConfig = {
+    output: 'export',
+    trailingSlash: true,
+    basePath: isProd ? '/cha-de-bebe' : '',
+    assetPrefix: isProd ? '/cha-de-bebe' : '',
+    images: { unoptimized: true }
+  };
+  ```
+  - Development: Empty basePath for localhost
+  - Production: basePath for GitHub Pages subdirectory
+  - Prevents 404 errors in local development
 
 ### CSS and Styling Lessons
-- ✅ **Font loading**: Google Fonts via `@import` in globals.css works reliably
-- ✅ **Custom classes**: Define font classes AFTER Tailwind to prevent override
+- ✅ **Font loading**: Use `<link>` in layout.tsx, NOT `@import` in CSS
+  - ❌ `@import url('...')` in globals.css causes parsing errors with Tailwind v4
+  - ✅ Use `<link>` tags in `<head>` of layout.tsx instead
+  - Example:
+    ```tsx
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" />
+    </head>
+    ```
+- ✅ **Custom classes**: Define font classes in globals.css AFTER all @import statements
 - ✅ **Z-index hierarchy**: Establish clear layering system:
   - `z-0`: Background decorations
   - `z-5`: Secondary decorative elements
@@ -184,11 +203,20 @@ wisesolutions-projects.github.io/
 - ✅ **Responsive design**: Use Tailwind breakpoints (md:, lg:) consistently
 
 ### Common Issues & Solutions
+
+**Problem**: "Parsing CSS source code failed" error in development
+- **Cause**: `@import url('...')` for Google Fonts in globals.css conflicts with Tailwind v4
+- **Solution**: Remove `@import` from CSS, use `<link>` tags in layout.tsx `<head>` instead
+
+**Problem**: 404 error on localhost during development
+- **Cause**: basePath configured for production GitHub Pages
+- **Solution**: Use environment-based config to set basePath only in production:
+  ```typescript
+  basePath: isProd ? '/cha-de-bebe' : ''
+  ```
+
 **Problem**: Decorative elements overlap text on mobile
 - **Solution**: Proper z-index hierarchy with content at higher z-index than decorations
-
-**Problem**: Custom fonts not loading
-- **Solution**: Import in globals.css AFTER Tailwind, use `!important` in custom class
 
 **Problem**: Changes not showing on deployed site
 - **Solution**: Check GitHub Actions workflow status, wait 1-2 minutes for CDN cache
