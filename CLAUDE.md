@@ -67,19 +67,95 @@ jobs:
 - n8n webhook integration
 - Responsive design with mobile-first approach
 
-### Project Deployment Standards - NEW APPROACH
-- ✅ **Base domain**: `projects.wisesolutions.uk`
+### Project Deployment Standards - FINAL APPROACH ✅
+- ✅ **Main portal**: `wisesolutions-projects/projects.wisesolutions.uk`
+- ✅ **Portal URL**: `projects.wisesolutions.uk` (lista todos os projetos)
 - ✅ **Subpath structure**: `projects.wisesolutions.uk/project-name/`
-- ✅ **Repository pattern**: `wisesolutions-projects/project-name`
-- ✅ **Single domain, multiple projects** (subpaths not subdomains)
+- ✅ **Individual repos**: `wisesolutions-projects/project-name`
+- ✅ **URL preservation**: Iframe technique keeps custom domain URL
 
-### Standard Workflow for Subpath Projects
-1. Create repository: `wisesolutions-projects/project-name`
-2. Configure `next.config.ts` WITH basePath: `/project-name`
-3. Add `CNAME` file with `projects.wisesolutions.uk`
-4. Deploy via GitHub Actions automatically
-5. Final URL: `projects.wisesolutions.uk/project-name/`
+### Multi-Repository Architecture
+```
+projects.wisesolutions.uk/                    ← Main portal
+├── cha-de-bebe-mari/                        ← Iframe wrapper
+├── portfolio/                               ← Future project
+└── dashboard/                               ← Future project
+
+wisesolutions-projects.github.io/
+├── cha-de-bebe/                            ← Actual Next.js app
+├── portfolio/                              ← Future project
+└── dashboard/                              ← Future project
+```
+
+### Standard Workflow for New Projects
+1. **Individual Project**:
+   - Create repo: `wisesolutions-projects/project-name`
+   - Configure `next.config.ts` WITH `basePath: '/project-name'`
+   - Deploy to: `wisesolutions-projects.github.io/project-name/`
+
+2. **Portal Integration**:
+   - Add folder in portal: `projects.wisesolutions.uk/project-name/`
+   - Create iframe wrapper pointing to GitHub Pages
+   - Update main portal page with new project card
+   - Final URL: `projects.wisesolutions.uk/project-name/`
+
+### Iframe Wrapper Template
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; overflow: hidden; }
+        iframe { width: 100vw; height: 100vh; border: none; display: block; }
+        .loading { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .loading.hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">🚀 Loading Project...</div>
+    <iframe
+        src="https://wisesolutions-projects.github.io/project-name/"
+        onload="document.getElementById('loading').classList.add('hidden')">
+    </iframe>
+</body>
+</html>
+```
+
+### GitHub Pages Critical Configuration
+- ❌ **NEVER use legacy build**: Always set `build_type: "workflow"`
+- ✅ **Check API**: `GET /repos/owner/repo/pages` to verify config
+- ✅ **Fix via API**: `PUT /repos/owner/repo/pages` with `{"build_type": "workflow"}`
+- ✅ **Main repo CNAME**: `projects.wisesolutions.uk`
+- ✅ **Sub repos NO CNAME**: Use default GitHub Pages domain
+
+### Cache Busting Techniques (When GitHub Pages Won't Update)
+1. **File rename**: Change file/folder names completely
+2. **API configuration**: Switch build_type to force rebuild
+3. **Force push**: Multiple commits with different content
+4. **New paths**: Use fresh URLs without existing cache
+
+### Advanced Troubleshooting
+- 🔍 **Check raw files**: `https://raw.githubusercontent.com/owner/repo/main/file.html`
+- 🔍 **Verify API config**: Check `build_type` and `source` settings
+- 🔍 **Monitor workflows**: GitHub Actions tab for deployment status
+- 🔍 **Test new paths**: Use completely different URLs to bypass cache
+
+### URL Preservation Strategies
+1. **❌ Direct redirect**: Changes URL in browser
+2. **❌ Meta refresh**: Changes URL in browser
+3. **✅ Iframe wrapper**: Preserves custom domain URL
+4. **✅ JavaScript proxy**: Advanced but complex
+
+### Working Example - Baby Shower Project
+- **Main app**: `wisesolutions-projects.github.io/cha-de-bebe/`
+- **Portal integration**: `projects.wisesolutions.uk/cha-de-bebe-mari/`
+- **User experience**: URL stays on custom domain
+- **Technical solution**: Iframe with loading animation
 
 ---
-*Last updated: 2024-09-30 - Baby Shower Landing Page Project*
-*Custom domain deployment standards established*
+*Last updated: 2025-09-30 - Baby Shower Project COMPLETED*
+*Multi-repository architecture with URL preservation ESTABLISHED*

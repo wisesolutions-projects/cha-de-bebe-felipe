@@ -25,7 +25,8 @@
       "Bash(gh auth:*)",
       "WebFetch(domain:projetos.wisesolutions.uk)",
       "Bash(nslookup:*)",
-      "WebFetch(domain:projects.wisesolutions.uk)"
+      "WebFetch(domain:projects.wisesolutions.uk)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ],
     "deny": [],
     "ask": []
