@@ -429,7 +429,7 @@ export default function BabyShowerPage() {
 
             {/* Main Title */}
             <div className="relative mb-4">
-              <h1 className="text-6xl md:text-8xl font-normal text-[#4A90A4] mb-2 animate-fade-in-down" style={{ fontFamily: 'Cookie, cursive' }}>
+              <h1 className="cookie-regular text-6xl md:text-8xl font-normal text-[#4A90A4] mb-2 animate-fade-in-down">
                 Chá de Bebê
               </h1>
             </div>
