@@ -568,6 +568,14 @@ export default function BabyShowerPage() {
       </div>
 
       <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        .cookie-regular {
+          font-family: "Pacifico", cursive !important;
+          font-weight: 400;
+          font-style: normal;
+        }
+
         /* Advanced Floating Animations */
         @keyframes float-slow {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
