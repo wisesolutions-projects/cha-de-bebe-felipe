@@ -153,7 +153,7 @@ export default function BabyShowerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#E8F4F8] via-[#F0F8FF] to-[#E8F4F8] relative overflow-hidden">
       {/* Decorative Banner at Top */}
-      <div className="absolute top-0 left-0 right-0 h-16 flex justify-center items-start pointer-events-none z-10">
+      <div className="absolute top-0 left-0 right-0 h-16 flex justify-center items-start pointer-events-none z-5">
         <div className="flex gap-3 md:gap-4">
           {[...Array(15)].map((_, i) => (
             <div
@@ -166,9 +166,9 @@ export default function BabyShowerPage() {
       </div>
 
       {/* Sticker Elements with Advanced Animations */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         {/* GIANT Blue Balloons - CSS Created - Right Side */}
-        <div className="absolute top-12 right-4 md:top-16 md:right-12 sticker-element z-20">
+        <div className="absolute top-12 right-4 md:top-16 md:right-12 sticker-element">
           <div className="relative animate-balloon-float-1">
             <div className="absolute inset-0 bg-[#A8D8EA]/60 blur-2xl rounded-full"></div>
             {/* Balão Azul 1 */}
@@ -182,7 +182,7 @@ export default function BabyShowerPage() {
           </div>
         </div>
 
-        <div className="absolute top-32 right-20 md:top-48 md:right-32 sticker-element z-20">
+        <div className="absolute top-32 right-20 md:top-48 md:right-32 sticker-element">
           <div className="relative animate-balloon-float-2" style={{ animationDelay: '0.5s' }}>
             <div className="absolute inset-0 bg-[#5AA9C4]/60 blur-2xl rounded-full"></div>
             {/* Balão Azul 2 */}
@@ -195,7 +195,7 @@ export default function BabyShowerPage() {
           </div>
         </div>
 
-        <div className="absolute top-20 right-0 md:top-28 md:right-4 sticker-element z-20">
+        <div className="absolute top-20 right-0 md:top-28 md:right-4 sticker-element">
           <div className="relative animate-balloon-float-3" style={{ animationDelay: '1s' }}>
             <div className="absolute inset-0 bg-[#D4E6F1]/60 blur-2xl rounded-full"></div>
             {/* Balão Azul 3 */}
@@ -211,7 +211,7 @@ export default function BabyShowerPage() {
         {/* CSS Clouds - HUGE */}
 
         {/* HUGE Cloud - Top Left */}
-        <div className="absolute -top-4 -left-8 md:left-4 sticker-element animate-cloud-drift-slow z-10">
+        <div className="absolute -top-4 -left-8 md:left-4 sticker-element animate-cloud-drift-slow">
           <div className="relative w-[300px] h-[180px] md:w-[450px] md:h-[270px]">
             <div className="absolute bottom-0 left-[25%] w-[50%] h-[75%] bg-white/95 rounded-full blur-[4px] shadow-2xl"></div>
             <div className="absolute bottom-0 left-[5%] w-[45%] h-[60%] bg-white/90 rounded-full blur-[4px] shadow-2xl"></div>
@@ -223,7 +223,7 @@ export default function BabyShowerPage() {
         </div>
 
         {/* HUGE Cloud - Below Balloons Right Side */}
-        <div className="absolute top-48 -right-8 md:right-4 sticker-element animate-cloud-drift-reverse z-10">
+        <div className="absolute top-48 -right-8 md:right-4 sticker-element animate-cloud-drift-reverse">
           <div className="relative w-[320px] h-[190px] md:w-[480px] md:h-[280px]">
             <div className="absolute bottom-0 left-[25%] w-[50%] h-[75%] bg-white/95 rounded-full blur-[4px] shadow-2xl"></div>
             <div className="absolute bottom-0 left-[5%] w-[45%] h-[60%] bg-white/90 rounded-full blur-[4px] shadow-2xl"></div>
@@ -236,7 +236,7 @@ export default function BabyShowerPage() {
         </div>
 
         {/* Large Cloud - Center for depth */}
-        <div className="absolute top-32 left-1/4 sticker-element animate-cloud-drift-slow z-10" style={{ animationDelay: '1.5s' }}>
+        <div className="absolute top-32 left-1/4 sticker-element animate-cloud-drift-slow" style={{ animationDelay: '1.5s' }}>
           <div className="relative w-[200px] h-[120px] md:w-[280px] md:h-[168px]">
             <div className="absolute bottom-0 left-[20%] w-[50%] h-[70%] bg-white/90 rounded-full blur-[4px] shadow-xl"></div>
             <div className="absolute bottom-0 left-[5%] w-[40%] h-[55%] bg-white/85 rounded-full blur-[4px] shadow-xl"></div>
@@ -246,7 +246,7 @@ export default function BabyShowerPage() {
         </div>
 
         {/* More LARGE Blue Balloons - Bottom Left */}
-        <div className="absolute bottom-24 left-2 md:bottom-32 md:left-8 sticker-element z-20">
+        <div className="absolute bottom-24 left-2 md:bottom-32 md:left-8 sticker-element">
           <div className="relative animate-balloon-float-1" style={{ animationDelay: '1.5s' }}>
             <div className="absolute inset-0 bg-[#5AA9C4]/60 blur-2xl rounded-full"></div>
             {/* Balão Azul 4 */}
@@ -259,7 +259,7 @@ export default function BabyShowerPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-48 left-16 md:bottom-56 md:left-28 sticker-element z-20">
+        <div className="absolute bottom-48 left-16 md:bottom-56 md:left-28 sticker-element">
           <div className="relative animate-balloon-float-2" style={{ animationDelay: '2s' }}>
             <div className="absolute inset-0 bg-[#A8D8EA]/60 blur-2xl rounded-full"></div>
             {/* Balão Azul 5 */}
@@ -273,22 +273,22 @@ export default function BabyShowerPage() {
         </div>
 
         {/* CSS Stars - Elegant and Soft */}
-        <div className="absolute top-1/3 left-1/3 sticker-element animate-twinkle-soft z-15">
+        <div className="absolute top-1/3 left-1/3 sticker-element animate-twinkle-soft">
           <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#FFE66D] to-[#FFC93C] opacity-70 blur-sm" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
           </div>
         </div>
-        <div className="absolute top-2/3 right-1/3 sticker-element animate-twinkle-soft z-15" style={{ animationDelay: '1s' }}>
+        <div className="absolute top-2/3 right-1/3 sticker-element animate-twinkle-soft" style={{ animationDelay: '1s' }}>
           <div className="relative w-[35px] h-[35px] md:w-[45px] md:h-[45px]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#FFE66D] to-[#FFC93C] opacity-70 blur-sm" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
           </div>
         </div>
-        <div className="absolute top-1/2 right-1/6 sticker-element animate-twinkle-soft z-15" style={{ animationDelay: '2s' }}>
+        <div className="absolute top-1/2 right-1/6 sticker-element animate-twinkle-soft" style={{ animationDelay: '2s' }}>
           <div className="relative w-[38px] h-[38px] md:w-[48px] md:h-[48px]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#FFE66D] to-[#FFC93C] opacity-70 blur-sm" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
           </div>
         </div>
-        <div className="absolute bottom-1/3 left-1/4 sticker-element animate-twinkle-soft z-15" style={{ animationDelay: '2.5s' }}>
+        <div className="absolute bottom-1/3 left-1/4 sticker-element animate-twinkle-soft" style={{ animationDelay: '2.5s' }}>
           <div className="relative w-[36px] h-[36px] md:w-[46px] md:h-[46px]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#FFE66D] to-[#FFC93C] opacity-70 blur-sm" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
           </div>
@@ -307,7 +307,7 @@ export default function BabyShowerPage() {
         </div>
       )}
 
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="container mx-auto px-4 py-8 relative z-20">
         {/* Baby Carriage - Pure CSS/SVG */}
         <div className="absolute top-32 -left-20 md:left-4 w-[500px] h-[500px] md:w-[700px] md:h-[700px] z-0 opacity-60 animate-float-gentle transform rotate-[-8deg]">
           <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-2xl">
