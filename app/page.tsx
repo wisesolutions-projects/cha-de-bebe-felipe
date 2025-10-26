@@ -456,7 +456,7 @@ export default function BabyShowerPage() {
                       <div className="space-y-1">
                         <div className="text-lg">😊</div>
                         <p className="text-xs md:text-sm font-semibold text-orange-800">
-                          Nome não encontrado. Por favor, tente novamente com outra grafia.
+                          Nome não encontrado. Tente apenas seu primeiro nome ou apelido.
                         </p>
                       </div>
                     )}
