@@ -159,9 +159,12 @@ export default function BabyShowerPage() {
 
     const searchTerm = normalizeString(searchInput)
 
-    // Ignore generic titles - don't allow searching only by these words
+    // Ignore generic titles ONLY when searched alone (single word)
+    // Allow "Tia Katia" but block just "tia"
+    const searchWords = searchTerm.split(/[\s,]+/).filter(word => word.length > 0)
     const genericTitles = ['e', 'de', 'da', 'do', 'das', 'dos', 'tio', 'tia']
-    if (genericTitles.includes(searchTerm)) {
+
+    if (searchWords.length === 1 && genericTitles.includes(searchWords[0])) {
       setSearchResult({
         found: false
       })
@@ -170,8 +173,10 @@ export default function BabyShowerPage() {
     }
 
     // Find ALL matches - search in both nickname and as word in full name
+    // OR search by full name (e.g., "Tia Katia")
     const foundGifts = giftList.filter(gift =>
       normalizeString(gift.apelido) === searchTerm ||
+      normalizeString(gift.nome) === searchTerm ||
       matchesName(gift.nome, searchTerm)
     )
 
