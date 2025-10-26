@@ -139,8 +139,8 @@ export default function BabyShowerPage() {
     const normalizedName = normalizeString(name)
     const normalizedSearch = normalizeString(searchTerm)
 
-    // Ignore connecting words that are not names
-    const connectingWords = ['e', 'de', 'da', 'do', 'das', 'dos']
+    // Ignore connecting words and generic titles that are not names
+    const connectingWords = ['e', 'de', 'da', 'do', 'das', 'dos', 'tio', 'tia']
     if (connectingWords.includes(normalizedSearch)) {
       return false
     }
