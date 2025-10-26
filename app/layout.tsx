@@ -14,7 +14,29 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Chá de Bebê - Baby Monteiro Delboni",
-  description: "Você está convidado para o chá de bebê do Baby Monteiro Delboni",
+  description: "Você está convidado para o chá de bebê do Baby Monteiro Delboni! 👶🏻 Descubra o que você vai trazer. 16/11 às 14h no Condomínio San Filippo.",
+  openGraph: {
+    title: "Chá de Bebê - Baby Monteiro Delboni 👶🏻",
+    description: "Você está convidado para o chá de bebê! Descubra o que você vai trazer. 16/11 às 14h.",
+    url: "https://wisesolutions-projects.github.io/cha-de-bebe-felipe/",
+    siteName: "Chá de Bebê",
+    images: [
+      {
+        url: "https://wisesolutions-projects.github.io/cha-de-bebe-felipe/babyonboard.png",
+        width: 1200,
+        height: 630,
+        alt: "Baby on Board - Chá de Bebê",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chá de Bebê - Baby Monteiro Delboni 👶🏻",
+    description: "Você está convidado para o chá de bebê! Descubra o que você vai trazer. 16/11 às 14h.",
+    images: ["https://wisesolutions-projects.github.io/cha-de-bebe-felipe/babyonboard.png"],
+  },
 };
 
 export default function RootLayout({
