@@ -139,12 +139,6 @@ export default function BabyShowerPage() {
     const normalizedName = normalizeString(name)
     const normalizedSearch = normalizeString(searchTerm)
 
-    // Ignore connecting words and generic titles that are not names
-    const connectingWords = ['e', 'de', 'da', 'do', 'das', 'dos', 'tio', 'tia']
-    if (connectingWords.includes(normalizedSearch)) {
-      return false
-    }
-
     // Split name into words (by space, comma, "e", etc.)
     const words = normalizedName.split(/[\s,]+/).filter(word => word.length > 0)
 
@@ -164,6 +158,16 @@ export default function BabyShowerPage() {
     await new Promise(resolve => setTimeout(resolve, 300))
 
     const searchTerm = normalizeString(searchInput)
+
+    // Ignore generic titles - don't allow searching only by these words
+    const genericTitles = ['e', 'de', 'da', 'do', 'das', 'dos', 'tio', 'tia']
+    if (genericTitles.includes(searchTerm)) {
+      setSearchResult({
+        found: false
+      })
+      setIsLoading(false)
+      return
+    }
 
     // Find ALL matches - search in both nickname and as word in full name
     const foundGifts = giftList.filter(gift =>
