@@ -239,7 +239,7 @@ export default function BabyShowerPage() {
         {/* Complete Beach Scene - Full Width at Bottom with Subtle Animation */}
         <div className="absolute bottom-0 left-0 right-0 w-full animate-wave-subtle">
           <img
-            src="/beach-with-clouds.png"
+            src={`${process.env.NODE_ENV === 'production' ? '/cha-de-bebe-felipe' : ''}/beach-with-clouds.png`}
             alt="Beach scene with palm tree, waves and clouds"
             className="w-full h-auto object-cover object-bottom"
           />
@@ -263,7 +263,7 @@ export default function BabyShowerPage() {
         <div className="text-center pt-4 md:pt-6 mb-4">
           <div className="relative inline-block">
             <img
-              src="/babyonboard.png"
+              src={`${process.env.NODE_ENV === 'production' ? '/cha-de-bebe-felipe' : ''}/babyonboard.png`}
               alt="Baby on Board"
               className="w-full max-w-md md:max-w-xl mx-auto animate-float-title drop-shadow-2xl"
             />
