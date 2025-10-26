@@ -404,9 +404,6 @@ export default function BabyShowerPage() {
                             <p className="text-sm md:text-base font-bold text-blue-900">
                               {gift.nome}
                             </p>
-                            <p className="text-xs md:text-sm text-blue-700 mt-1">
-                              Item: {gift.item}
-                            </p>
                           </button>
                         ))}
                       </div>
