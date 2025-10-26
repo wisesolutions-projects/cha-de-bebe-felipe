@@ -338,7 +338,7 @@ export default function BabyShowerPage() {
           {/* Baby Name */}
           <div className="mb-4">
             <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#7BA8BC] px-4 py-1 animate-fade-in-up">
-              Baby Monteiro Delboni 👶🏻
+              Felipe Monteiro Delboni 👶🏻
             </h2>
           </div>
 
@@ -486,7 +486,7 @@ export default function BabyShowerPage() {
           <div className="relative max-w-md mx-auto group">
             <div className="relative bg-white/70 backdrop-blur-md rounded-xl p-3 md:p-4 shadow-lg border border-white/40 animate-footer-entrance hover:shadow-xl hover:scale-105 hover:bg-white/80 transition-all duration-500">
               <p className="text-sm md:text-base text-[#5A8CA3] font-medium leading-snug">
-                Contamos com sua presença para celebrar a chegada do nosso príncipe!
+                Contamos com sua presença para celebrar a chegada do nosso bebê!
                 <span className="animate-heartbeat inline-block ml-1 text-xl">💙</span>
               </p>
             </div>
