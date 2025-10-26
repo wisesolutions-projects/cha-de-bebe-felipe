@@ -338,7 +338,7 @@ export default function BabyShowerPage() {
           {/* Baby Name */}
           <div className="mb-4">
             <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#7BA8BC] px-4 py-1 animate-fade-in-up">
-              Baby Monteiro Delboni 💙
+              Baby Monteiro Delboni 👶🏻
             </h2>
           </div>
 
