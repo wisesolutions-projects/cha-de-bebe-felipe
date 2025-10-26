@@ -151,147 +151,34 @@ export default function BabyShowerPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#E8F4F8] via-[#F0F8FF] to-[#E8F4F8] relative overflow-hidden">
-      {/* Decorative Banner at Top */}
-      <div className="absolute top-0 left-0 right-0 h-16 flex justify-center items-start pointer-events-none z-5">
-        <div className="flex gap-3 md:gap-4">
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-14 md:w-12 md:h-16 bg-gradient-to-b from-[#A8D8EA] to-transparent rounded-b-full opacity-80 animate-banner-wave"
-              style={{ animationDelay: `${i * 0.1}s` }}
-            />
-          ))}
-        </div>
+    <div className="min-h-screen bg-[#F5F5F0] relative overflow-hidden">
+      {/* Background Image - Full */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/background.jpg"
+          alt="Beach background"
+          className="w-full h-full object-cover opacity-95"
+        />
       </div>
 
-      {/* Sticker Elements with Advanced Animations */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        {/* GIANT Blue Balloons - CSS Created - Right Side */}
-        <div className="absolute top-12 right-4 md:top-16 md:right-12 sticker-element">
-          <div className="relative animate-balloon-float-1">
-            <div className="absolute inset-0 bg-[#A8D8EA]/60 blur-2xl rounded-full"></div>
-            {/* Balão Azul 1 */}
-            <div className="relative w-[100px] h-[120px] md:w-[140px] md:h-[170px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#7CC8E8] via-[#5AA9C4] to-[#4A90A4] rounded-full"></div>
-              <div className="absolute top-[15%] left-[20%] w-[30%] h-[30%] bg-white/40 rounded-full blur-sm"></div>
-              {/* String do balão */}
-              <div className="absolute bottom-0 left-1/2 w-[2px] h-[40px] md:h-[60px] bg-[#4A90A4] transform -translate-x-1/2"></div>
-              <div className="absolute -bottom-[10px] left-1/2 w-[8px] h-[8px] bg-[#4A90A4] rounded-full transform -translate-x-1/2"></div>
-            </div>
-          </div>
+      {/* Beach Decorative Elements */}
+      <div className="absolute inset-0 pointer-events-none z-5">
+        {/* Sand with Palm Tree and Surfboards - Bottom Left */}
+        <div className="absolute bottom-0 left-0 w-[350px] h-[250px] md:w-[500px] md:h-[350px]">
+          <img
+            src="/sand.png"
+            alt="Beach sand with palm tree"
+            className="w-full h-full object-contain"
+          />
         </div>
 
-        <div className="absolute top-32 right-20 md:top-48 md:right-32 sticker-element">
-          <div className="relative animate-balloon-float-2" style={{ animationDelay: '0.5s' }}>
-            <div className="absolute inset-0 bg-[#5AA9C4]/60 blur-2xl rounded-full"></div>
-            {/* Balão Azul 2 */}
-            <div className="relative w-[90px] h-[110px] md:w-[120px] md:h-[145px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#A8D8EA] via-[#7CC8E8] to-[#5AA9C4] rounded-full"></div>
-              <div className="absolute top-[15%] left-[20%] w-[30%] h-[30%] bg-white/40 rounded-full blur-sm"></div>
-              <div className="absolute bottom-0 left-1/2 w-[2px] h-[35px] md:h-[50px] bg-[#5AA9C4] transform -translate-x-1/2"></div>
-              <div className="absolute -bottom-[10px] left-1/2 w-[8px] h-[8px] bg-[#5AA9C4] rounded-full transform -translate-x-1/2"></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute top-20 right-0 md:top-28 md:right-4 sticker-element">
-          <div className="relative animate-balloon-float-3" style={{ animationDelay: '1s' }}>
-            <div className="absolute inset-0 bg-[#D4E6F1]/60 blur-2xl rounded-full"></div>
-            {/* Balão Azul 3 */}
-            <div className="relative w-[80px] h-[100px] md:w-[110px] md:h-[135px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#B8E2F2] via-[#A8D8EA] to-[#7CC8E8] rounded-full"></div>
-              <div className="absolute top-[15%] left-[20%] w-[30%] h-[30%] bg-white/40 rounded-full blur-sm"></div>
-              <div className="absolute bottom-0 left-1/2 w-[2px] h-[30px] md:h-[45px] bg-[#7CC8E8] transform -translate-x-1/2"></div>
-              <div className="absolute -bottom-[10px] left-1/2 w-[8px] h-[8px] bg-[#7CC8E8] rounded-full transform -translate-x-1/2"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* CSS Clouds - HUGE */}
-
-        {/* HUGE Cloud - Top Left */}
-        <div className="absolute -top-4 -left-8 md:left-4 sticker-element animate-cloud-drift-slow">
-          <div className="relative w-[300px] h-[180px] md:w-[450px] md:h-[270px]">
-            <div className="absolute bottom-0 left-[25%] w-[50%] h-[75%] bg-white/95 rounded-full blur-[4px] shadow-2xl"></div>
-            <div className="absolute bottom-0 left-[5%] w-[45%] h-[60%] bg-white/90 rounded-full blur-[4px] shadow-2xl"></div>
-            <div className="absolute bottom-0 right-[8%] w-[48%] h-[68%] bg-white/93 rounded-full blur-[4px] shadow-2xl"></div>
-            <div className="absolute top-[10%] left-[30%] w-[40%] h-[55%] bg-white/88 rounded-full blur-[4px] shadow-lg"></div>
-            <div className="absolute top-[5%] left-[45%] w-[35%] h-[50%] bg-white/85 rounded-full blur-[4px] shadow-lg"></div>
-            <div className="absolute bottom-[10%] left-[15%] w-[42%] h-[58%] bg-white/92 rounded-full blur-[4px] shadow-xl"></div>
-          </div>
-        </div>
-
-        {/* HUGE Cloud - Below Balloons Right Side */}
-        <div className="absolute top-48 -right-8 md:right-4 sticker-element animate-cloud-drift-reverse">
-          <div className="relative w-[320px] h-[190px] md:w-[480px] md:h-[280px]">
-            <div className="absolute bottom-0 left-[25%] w-[50%] h-[75%] bg-white/95 rounded-full blur-[4px] shadow-2xl"></div>
-            <div className="absolute bottom-0 left-[5%] w-[45%] h-[60%] bg-white/90 rounded-full blur-[4px] shadow-2xl"></div>
-            <div className="absolute bottom-0 right-[8%] w-[48%] h-[68%] bg-white/93 rounded-full blur-[4px] shadow-2xl"></div>
-            <div className="absolute top-[10%] left-[30%] w-[40%] h-[55%] bg-white/88 rounded-full blur-[4px] shadow-lg"></div>
-            <div className="absolute top-[5%] left-[45%] w-[35%] h-[50%] bg-white/87 rounded-full blur-[4px] shadow-lg"></div>
-            <div className="absolute bottom-[10%] left-[15%] w-[42%] h-[58%] bg-white/92 rounded-full blur-[4px] shadow-xl"></div>
-            <div className="absolute top-[15%] right-[10%] w-[38%] h-[52%] bg-white/89 rounded-full blur-[4px] shadow-lg"></div>
-          </div>
-        </div>
-
-        {/* Large Cloud - Center for depth */}
-        <div className="absolute top-32 left-1/4 sticker-element animate-cloud-drift-slow" style={{ animationDelay: '1.5s' }}>
-          <div className="relative w-[200px] h-[120px] md:w-[280px] md:h-[168px]">
-            <div className="absolute bottom-0 left-[20%] w-[50%] h-[70%] bg-white/90 rounded-full blur-[4px] shadow-xl"></div>
-            <div className="absolute bottom-0 left-[5%] w-[40%] h-[55%] bg-white/85 rounded-full blur-[4px] shadow-xl"></div>
-            <div className="absolute bottom-0 right-[10%] w-[45%] h-[65%] bg-white/88 rounded-full blur-[4px] shadow-xl"></div>
-            <div className="absolute top-[10%] left-[30%] w-[38%] h-[52%] bg-white/83 rounded-full blur-[4px] shadow-lg"></div>
-          </div>
-        </div>
-
-        {/* More LARGE Blue Balloons - Bottom Left */}
-        <div className="absolute bottom-24 left-2 md:bottom-32 md:left-8 sticker-element">
-          <div className="relative animate-balloon-float-1" style={{ animationDelay: '1.5s' }}>
-            <div className="absolute inset-0 bg-[#5AA9C4]/60 blur-2xl rounded-full"></div>
-            {/* Balão Azul 4 */}
-            <div className="relative w-[85px] h-[105px] md:w-[110px] md:h-[135px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#7CC8E8] via-[#5AA9C4] to-[#4A90A4] rounded-full"></div>
-              <div className="absolute top-[15%] left-[20%] w-[30%] h-[30%] bg-white/40 rounded-full blur-sm"></div>
-              <div className="absolute bottom-0 left-1/2 w-[2px] h-[35px] md:h-[50px] bg-[#4A90A4] transform -translate-x-1/2"></div>
-              <div className="absolute -bottom-[10px] left-1/2 w-[8px] h-[8px] bg-[#4A90A4] rounded-full transform -translate-x-1/2"></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-48 left-16 md:bottom-56 md:left-28 sticker-element">
-          <div className="relative animate-balloon-float-2" style={{ animationDelay: '2s' }}>
-            <div className="absolute inset-0 bg-[#A8D8EA]/60 blur-2xl rounded-full"></div>
-            {/* Balão Azul 5 */}
-            <div className="relative w-[75px] h-[95px] md:w-[100px] md:h-[125px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#B8E2F2] via-[#A8D8EA] to-[#7CC8E8] rounded-full"></div>
-              <div className="absolute top-[15%] left-[20%] w-[30%] h-[30%] bg-white/40 rounded-full blur-sm"></div>
-              <div className="absolute bottom-0 left-1/2 w-[2px] h-[30px] md:h-[45px] bg-[#7CC8E8] transform -translate-x-1/2"></div>
-              <div className="absolute -bottom-[10px] left-1/2 w-[8px] h-[8px] bg-[#7CC8E8] rounded-full transform -translate-x-1/2"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* CSS Stars - Elegant and Soft */}
-        <div className="absolute top-1/3 left-1/3 sticker-element animate-twinkle-soft">
-          <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px]">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#FFE66D] to-[#FFC93C] opacity-70 blur-sm" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
-          </div>
-        </div>
-        <div className="absolute top-2/3 right-1/3 sticker-element animate-twinkle-soft" style={{ animationDelay: '1s' }}>
-          <div className="relative w-[35px] h-[35px] md:w-[45px] md:h-[45px]">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#FFE66D] to-[#FFC93C] opacity-70 blur-sm" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
-          </div>
-        </div>
-        <div className="absolute top-1/2 right-1/6 sticker-element animate-twinkle-soft" style={{ animationDelay: '2s' }}>
-          <div className="relative w-[38px] h-[38px] md:w-[48px] md:h-[48px]">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#FFE66D] to-[#FFC93C] opacity-70 blur-sm" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
-          </div>
-        </div>
-        <div className="absolute bottom-1/3 left-1/4 sticker-element animate-twinkle-soft" style={{ animationDelay: '2.5s' }}>
-          <div className="relative w-[36px] h-[36px] md:w-[46px] md:h-[46px]">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#FFE66D] to-[#FFC93C] opacity-70 blur-sm" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
-          </div>
+        {/* Wave - Bottom Right with Animation */}
+        <div className="absolute bottom-0 right-0 w-[400px] h-[280px] md:w-[550px] md:h-[380px] animate-wave-gentle">
+          <img
+            src="/wave.png"
+            alt="Ocean wave"
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
 
@@ -308,149 +195,30 @@ export default function BabyShowerPage() {
       )}
 
       <div className="container mx-auto px-4 py-8 relative z-20">
-        {/* Baby Carriage - Pure CSS/SVG */}
-        <div className="absolute top-32 -left-20 md:left-4 w-[500px] h-[500px] md:w-[700px] md:h-[700px] z-0 opacity-60 animate-float-gentle transform rotate-[-8deg]">
-          <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-2xl">
-            {/* Heart Background */}
-            <defs>
-              <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
-              </filter>
-            </defs>
-
-            <path
-              d="M 200 350 C 200 350 80 260 80 180 C 80 130 110 100 145 100 C 170 100 200 120 200 120 C 200 120 230 100 255 100 C 290 100 320 130 320 180 C 320 260 200 350 200 350 Z"
-              fill="#B8E2F2"
-              opacity="0.7"
-            />
-
-            {/* Carriage Base - Lower part */}
-            <ellipse cx="200" cy="220" rx="85" ry="45" fill="#A8D8EA" stroke="#2A5A6A" strokeWidth="3"/>
-
-            {/* Carriage Body - Main blue part with curve */}
-            <path
-              d="M 115 220 Q 115 175 145 155 L 255 155 Q 285 175 285 220 Z"
-              fill="#1E7C9A"
-              stroke="#2A5A6A"
-              strokeWidth="3"
-            />
-
-            {/* White polka dots on body */}
-            <circle cx="135" cy="180" r="6" fill="white" opacity="0.95"/>
-            <circle cx="160" cy="180" r="6" fill="white" opacity="0.95"/>
-            <circle cx="185" cy="180" r="6" fill="white" opacity="0.95"/>
-            <circle cx="210" cy="180" r="6" fill="white" opacity="0.95"/>
-            <circle cx="235" cy="180" r="6" fill="white" opacity="0.95"/>
-            <circle cx="260" cy="180" r="6" fill="white" opacity="0.95"/>
-
-            <circle cx="125" cy="200" r="6" fill="white" opacity="0.95"/>
-            <circle cx="150" cy="200" r="6" fill="white" opacity="0.95"/>
-            <circle cx="175" cy="200" r="6" fill="white" opacity="0.95"/>
-            <circle cx="200" cy="200" r="6" fill="white" opacity="0.95"/>
-            <circle cx="225" cy="200" r="6" fill="white" opacity="0.95"/>
-            <circle cx="250" cy="200" r="6" fill="white" opacity="0.95"/>
-            <circle cx="275" cy="200" r="6" fill="white" opacity="0.95"/>
-
-            {/* White horizontal stripe */}
-            <rect x="115" y="195" width="170" height="10" fill="white" opacity="0.95" rx="3"/>
-
-            {/* Hood/Canopy - White triangular part */}
-            <path
-              d="M 145 155 L 200 110 L 255 155 Z"
-              fill="white"
-              stroke="#2A5A6A"
-              strokeWidth="3"
-            />
-
-            {/* Inner hood detail */}
-            <path
-              d="M 165 145 L 200 120 L 235 145 Z"
-              fill="#E8F4F8"
-            />
-
-            {/* Blue side of hood with dots */}
-            <path
-              d="M 200 110 L 255 155 L 270 148 L 215 103 Z"
-              fill="#1E7C9A"
-              stroke="#2A5A6A"
-              strokeWidth="2.5"
-            />
-            <circle cx="225" cy="125" r="5" fill="white" opacity="0.9"/>
-            <circle cx="240" cy="138" r="5" fill="white" opacity="0.9"/>
-            <circle cx="220" cy="138" r="5" fill="white" opacity="0.9"/>
-
-            {/* Handle - Curved */}
-            <path
-              d="M 285 195 Q 320 188 340 162 Q 348 148 345 135"
-              stroke="#2A5A6A"
-              strokeWidth="5"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <circle cx="345" cy="135" r="6" fill="#2A5A6A"/>
-
-            {/* Suspension base */}
-            <ellipse cx="150" cy="230" rx="45" ry="15" fill="#A8D8EA" stroke="#2A5A6A" strokeWidth="3"/>
-            <ellipse cx="250" cy="230" rx="45" ry="15" fill="#A8D8EA" stroke="#2A5A6A" strokeWidth="3"/>
-
-            {/* Left Wheel */}
-            <circle cx="150" cy="280" r="45" fill="#1A3A4A" stroke="#000000" strokeWidth="5"/>
-            <circle cx="150" cy="280" r="38" fill="#A8D8EA" stroke="#1A3A4A" strokeWidth="3"/>
-            <circle cx="150" cy="280" r="6" fill="#1A3A4A"/>
-
-            {/* Left Wheel Spokes */}
-            <line x1="150" y1="238" x2="150" y2="322" stroke="#1A3A4A" strokeWidth="2"/>
-            <line x1="108" y1="280" x2="192" y2="280" stroke="#1A3A4A" strokeWidth="2"/>
-            <line x1="120" y1="250" x2="180" y2="310" stroke="#1A3A4A" strokeWidth="2"/>
-            <line x1="180" y1="250" x2="120" y2="310" stroke="#1A3A4A" strokeWidth="2"/>
-            <line x1="130" y1="258" x2="170" y2="302" stroke="#1A3A4A" strokeWidth="1.5"/>
-            <line x1="170" y1="258" x2="130" y2="302" stroke="#1A3A4A" strokeWidth="1.5"/>
-
-            {/* Right Wheel */}
-            <circle cx="250" cy="280" r="45" fill="#1A3A4A" stroke="#000000" strokeWidth="5"/>
-            <circle cx="250" cy="280" r="38" fill="#A8D8EA" stroke="#1A3A4A" strokeWidth="3"/>
-            <circle cx="250" cy="280" r="6" fill="#1A3A4A"/>
-
-            {/* Right Wheel Spokes */}
-            <line x1="250" y1="238" x2="250" y2="322" stroke="#1A3A4A" strokeWidth="2"/>
-            <line x1="208" y1="280" x2="292" y2="280" stroke="#1A3A4A" strokeWidth="2"/>
-            <line x1="220" y1="250" x2="280" y2="310" stroke="#1A3A4A" strokeWidth="2"/>
-            <line x1="280" y1="250" x2="220" y2="310" stroke="#1A3A4A" strokeWidth="2"/>
-            <line x1="230" y1="258" x2="270" y2="302" stroke="#1A3A4A" strokeWidth="1.5"/>
-            <line x1="270" y1="258" x2="230" y2="302" stroke="#1A3A4A" strokeWidth="1.5"/>
-          </svg>
-        </div>
-
         {/* Hero Section */}
         <div className="text-center mb-16 pt-8 relative z-20">
-          <div className="relative">
-            {/* Soft watercolor glow behind title */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#A8D8EA]/30 via-[#D4E6F1]/40 to-[#A8D8EA]/30 blur-3xl animate-pulse-soft"></div>
-
-            {/* Main Title */}
-            <div className="relative mb-4">
-              <h1 className="cookie-regular text-6xl md:text-8xl font-normal text-[#4A90A4] mb-2 animate-fade-in-down">
-                Chá de Bebê
-              </h1>
-            </div>
+          {/* Baby on Board Title Image */}
+          <div className="relative mb-8">
+            <img
+              src="/babyonboard.png"
+              alt="Baby on Board"
+              className="w-full max-w-2xl mx-auto animate-fade-in-down"
+            />
           </div>
 
-          {/* Baby Name with Cloud Background */}
-          <div className="flex items-center justify-center gap-3 md:gap-4 mb-8">
-            <div className="relative">
-              <div className="absolute inset-0 bg-[#D4E6F1]/40 blur-2xl rounded-full"></div>
-              <h2 className="relative text-3xl md:text-5xl font-bold text-[#4A90A4] px-6 py-2 animate-fade-in-up">
-                Baby Monteiro Delboni 💙
-              </h2>
-            </div>
+          {/* Baby Name */}
+          <div className="mb-8">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#7BA8BC] px-6 py-2 animate-fade-in-up">
+              Baby Monteiro Delboni 💙
+            </h2>
           </div>
 
-          {/* Event Details Card with Soft Style */}
-          <div className="max-w-lg mx-auto bg-white/40 backdrop-blur-md rounded-3xl shadow-xl p-8 border-2 border-[#A8D8EA]/50 transform hover:scale-105 transition-all duration-500 animate-card-entrance">
+          {/* Event Details Card with Beach Style */}
+          <div className="max-w-lg mx-auto bg-white/90 backdrop-blur-md rounded-3xl shadow-xl p-8 border-2 border-[#A8C9D8]/50 transform hover:scale-105 transition-all duration-500 animate-card-entrance">
             <div className="space-y-5">
               <div className="flex items-center justify-center gap-3">
                 <span className="text-3xl">📅</span>
-                <span className="text-2xl md:text-3xl font-bold text-[#4A90A4]">16/11 - 14h</span>
+                <span className="text-2xl md:text-3xl font-bold text-[#5A8CA3]">16/11 - 14h</span>
               </div>
               <div className="flex items-center justify-center gap-3">
                 <span className="text-3xl">📍</span>
@@ -458,7 +226,7 @@ export default function BabyShowerPage() {
                   href="https://share.google/paFdm3ZPtXyhYeyCw"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg md:text-xl text-[#4A90A4] text-center leading-relaxed hover:text-[#3A7A94] hover:underline transition-all duration-300 cursor-pointer font-medium"
+                  className="text-lg md:text-xl text-[#5A8CA3] text-center leading-relaxed hover:text-[#4A7A93] hover:underline transition-all duration-300 cursor-pointer font-medium"
                 >
                   Salão de festas condomínio<br />San Filippo
                 </a>
@@ -472,13 +240,13 @@ export default function BabyShowerPage() {
         <div className="max-w-2xl mx-auto">
           <div className="relative">
             {/* Soft border glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#A8D8EA] via-[#D4E6F1] to-[#A8D8EA] rounded-3xl blur opacity-40 animate-border-glow-soft"></div>
-            <div className="relative bg-white/45 backdrop-blur-lg rounded-3xl shadow-xl p-8 md:p-12 border-2 border-[#A8D8EA]/60 animate-section-entrance">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#A8C9D8] via-[#D4E8F1] to-[#A8C9D8] rounded-3xl blur opacity-40 animate-border-glow-soft"></div>
+            <div className="relative bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl p-8 md:p-12 border-2 border-[#A8C9D8]/60 animate-section-entrance">
               <div className="text-center mb-8">
-                <h3 className="text-3xl md:text-4xl font-bold text-[#4A90A4] mb-4">
+                <h3 className="text-3xl md:text-4xl font-bold text-[#5A8CA3] mb-4">
                   🎁 Você está convidado!
                 </h3>
-                <p className="text-lg md:text-xl text-[#4A90A4]/80 font-medium">
+                <p className="text-lg md:text-xl text-[#5A8CA3]/80 font-medium">
                   Digite seu nome ou apelido abaixo
                 </p>
               </div>
@@ -486,7 +254,7 @@ export default function BabyShowerPage() {
               <div className="space-y-6">
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <svg className="h-5 w-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-5 w-5 text-[#7BA8BC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </div>
@@ -496,7 +264,7 @@ export default function BabyShowerPage() {
                     onChange={(e) => setSearchInput(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Digite seu nome ou apelido..."
-                    className="w-full pl-12 pr-4 py-4 text-lg text-[#4A90A4] placeholder:text-[#A8D8EA] border-2 border-[#A8D8EA] rounded-2xl focus:ring-4 focus:ring-[#D4E6F1] focus:border-[#4A90A4] outline-none transition-all duration-300 bg-[#F0F8FF]/80 font-medium"
+                    className="w-full pl-12 pr-4 py-4 text-lg text-[#5A8CA3] placeholder:text-[#A8C9D8] border-2 border-[#A8C9D8] rounded-2xl focus:ring-4 focus:ring-[#D4E8F1] focus:border-[#5A8CA3] outline-none transition-all duration-300 bg-white/80 font-medium"
                     disabled={isLoading}
                   />
                 </div>
@@ -504,7 +272,7 @@ export default function BabyShowerPage() {
                 <button
                   onClick={handleSearch}
                   disabled={isLoading || !searchInput.trim()}
-                  className="group relative w-full py-4 px-8 bg-gradient-to-r from-[#5AA9C4] via-[#4A90A4] to-[#5AA9C4] hover:from-[#4A90A4] hover:via-[#3A7A94] hover:to-[#4A90A4] disabled:from-gray-400 disabled:to-gray-500 text-white text-lg md:text-xl font-bold rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 disabled:scale-100 disabled:cursor-not-allowed animate-gradient-x overflow-hidden"
+                  className="group relative w-full py-4 px-8 bg-gradient-to-r from-[#7BA8BC] via-[#5A8CA3] to-[#7BA8BC] hover:from-[#5A8CA3] hover:via-[#4A7A93] hover:to-[#5A8CA3] disabled:from-gray-400 disabled:to-gray-500 text-white text-lg md:text-xl font-bold rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 disabled:scale-100 disabled:cursor-not-allowed animate-gradient-x overflow-hidden"
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center gap-2">
@@ -556,9 +324,9 @@ export default function BabyShowerPage() {
         <div className="text-center mt-16 mb-8">
           <div className="relative max-w-3xl mx-auto">
             {/* Soft glow around footer */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-[#A8D8EA]/20 via-[#D4E6F1]/30 to-[#A8D8EA]/20 rounded-3xl blur-xl animate-pulse-soft"></div>
-            <div className="relative bg-white/45 backdrop-blur-lg rounded-3xl p-8 md:p-10 shadow-xl border-2 border-[#A8D8EA]/50 animate-footer-entrance">
-              <p className="text-xl md:text-2xl text-[#4A90A4] font-medium leading-relaxed">
+            <div className="absolute -inset-2 bg-gradient-to-r from-[#A8C9D8]/20 via-[#D4E8F1]/30 to-[#A8C9D8]/20 rounded-3xl blur-xl animate-pulse-soft"></div>
+            <div className="relative bg-white/90 backdrop-blur-lg rounded-3xl p-8 md:p-10 shadow-xl border-2 border-[#A8C9D8]/50 animate-footer-entrance">
+              <p className="text-xl md:text-2xl text-[#5A8CA3] font-medium leading-relaxed">
                 Contamos com sua presença para celebrar a chegada do nosso príncipe!
                 <span className="animate-heartbeat inline-block ml-2 text-3xl">💙</span>
               </p>
@@ -726,6 +494,12 @@ export default function BabyShowerPage() {
           0% { opacity: 0; transform: translateY(-20px); }
           100% { opacity: 1; transform: translateY(0); }
         }
+        @keyframes wave-gentle {
+          0%, 100% { transform: translateX(0px) translateY(0px) scale(1); }
+          25% { transform: translateX(-15px) translateY(-8px) scale(1.02); }
+          50% { transform: translateX(-25px) translateY(-5px) scale(1.05); }
+          75% { transform: translateX(-15px) translateY(-3px) scale(1.02); }
+        }
 
         /* Particle Animations */
         @keyframes particle-1 {
@@ -843,6 +617,7 @@ export default function BabyShowerPage() {
         .animate-pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
         .animate-border-glow-soft { animation: border-glow-soft 3s ease-in-out infinite; }
         .animate-fade-in-down { animation: fade-in-down 1s ease-out 0.2s both; }
+        .animate-wave-gentle { animation: wave-gentle 6s ease-in-out infinite; }
 
         /* Sticker Effect Styles */
         .sticker-element {
