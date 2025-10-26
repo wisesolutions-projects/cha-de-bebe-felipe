@@ -139,6 +139,12 @@ export default function BabyShowerPage() {
     const normalizedName = normalizeString(name)
     const normalizedSearch = normalizeString(searchTerm)
 
+    // Ignore connecting words that are not names
+    const connectingWords = ['e', 'de', 'da', 'do', 'das', 'dos']
+    if (connectingWords.includes(normalizedSearch)) {
+      return false
+    }
+
     // Split name into words (by space, comma, "e", etc.)
     const words = normalizedName.split(/[\s,]+/).filter(word => word.length > 0)
 
