@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 interface GiftItem {
   nome: string
   apelido: string
+  telefone: string
   item: string
 }
 
@@ -24,79 +25,80 @@ export default function BabyShowerPage() {
   const [showSelectionDialog, setShowSelectionDialog] = useState(false)
 
   const giftList: GiftItem[] = [
-    { nome: "Gian Giannotti", apelido: "Gianzinho", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Mariana Monteiro Delboni", apelido: "Mariana", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Cristina Delboni", apelido: "Cristina", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Irineu Delboni", apelido: "Irineu", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Vanessa, Antônio e Benjamin", apelido: "Vanessa", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Jessica, Ricardo e Daniel", apelido: "Jessica", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Fernando, Vivi e Fernandinho", apelido: "Fernando", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Eduardo", apelido: "Borracha", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Gustavo", apelido: "Cabeça", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Júnior e Família", apelido: "Júnior", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Felipe", apelido: "Catatau", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Pedro", apelido: "Pedrinho Neb", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Rodrigo", apelido: "Jaguncinho", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Suelen, Ronaldo e família", apelido: "Suelen", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Nicolas, Rafa e Laura", apelido: "Nicolas", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Leonardo", apelido: "Leo", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Rodrigo", apelido: "Mineiro", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "João e Mariah", apelido: "João", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Rafael", apelido: "Bubble", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Caroline", apelido: "Carol", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Paula, Pedro, Maria e Olívia", apelido: "Paula", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Aline e Mariah", apelido: "Aline", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Carina, Danilo, Catarina e Caetano", apelido: "Carina", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Luiz Eduardo", apelido: "Billows", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Chenkel, Bel e Sophia", apelido: "Chenkel", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Nikolas e Jordana", apelido: "Nikolas", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Beatriz", apelido: "Beatriz", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Luiz Eduardo Muniz", apelido: "Luiz", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Guilherme", apelido: "Guido", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tassia", apelido: "Tassia", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Hanna, Thiago, Cecília e Thomas", apelido: "Hanna", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Lívia, Mariah, Malu e Pedrinho", apelido: "Lívia", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Keli, Cauã e Gabriel", apelido: "Keli", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Jordana e Lívia", apelido: "Jordana", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Suellen", apelido: "Su", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Danielle", apelido: "Magra", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Daniela, Carim, Gabriel e Christian", apelido: "Daniela", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Manoela, Chris, Mia e Oliver", apelido: "Manoela", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Magda e Francisco", apelido: "Magda", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Bruna, Nicolle, Rodolfo e Vincenzo", apelido: "Bruna", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Vó Gina", apelido: "Vó", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tia Maninha", apelido: "Tia", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Fátima", apelido: "Fátima", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "João e Stephanie", apelido: "João", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Odenir e Solange", apelido: "Odenir", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Celso e Heloísa", apelido: "Celso", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tia Regina e Francisco", apelido: "Tia", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Marceu e Adriana", apelido: "Marceu", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Teresa Cristina", apelido: "Teresa", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Pedro", apelido: "Pedrão", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Vinícius e Cláudia", apelido: "Vinícius", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Bel", apelido: "Bel", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Lanna e Arthur", apelido: "Lanna", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Milton, Rose, Aninha e Raissa", apelido: "Milton", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tio Paulinho e Soraya", apelido: "Tio", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Carlos Alexandre", apelido: "Kaká", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tio Beto", apelido: "Tio", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tio Lidi e Tia Tânia ", apelido: "Tio", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Alex e família", apelido: "Alex", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Cadu e família", apelido: "Cadu", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Georgia e Família", apelido: "Georgia", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Priscila e Caio ", apelido: "Priscila", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Fernanda e Família", apelido: "Fernanda", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
-    { nome: "Tio Daniel, Tia Carla, Victor e Giullia", apelido: "Tio", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tia Deca e Tio Umberto", apelido: "Tia", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tia Katia e Victoria ", apelido: "Tia", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tio Nico e Família", apelido: "Tio", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Denis, Ciça e Leon", apelido: "Denis", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tia Dedé", apelido: "Tia", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-    { nome: "Tia Cristina ", apelido: "Tia", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" }
+  { nome: "Gian Giannotti", apelido: "Gianzinho", telefone: "44 7899630047", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Mariana Monteiro Delboni", apelido: "Mariana", telefone: "21 98316-0272", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Cristina Delboni", apelido: "Cristina", telefone: "21 981828368", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Irineu Delboni", apelido: "Irineu", telefone: "21 981354433", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Vanessa, Antônio e Benjamin", apelido: "Vanessa", telefone: "21 983650147", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Jessica, Ricardo e Daniel", apelido: "Jessica", telefone: "21 981354411", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Fernando, Vivi e Fernandinho", apelido: "Fernando", telefone: "21 999124183", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Eduardo (Borracha) e Família", apelido: "Borracha", telefone: "21 997519088", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Gustavo (Cabeça) e Família", apelido: "Cabeça", telefone: "21 979543684", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Júnior e Família", apelido: "Júnior", telefone: "21 999550033", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Felipe (Catatau) e Família", apelido: "Catatau", telefone: "21 988812124", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Pedro (Pedrinho Neb)", apelido: "Pedrinho Neb", telefone: "21 992176896", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Rodrigo (Jaguncinho)", apelido: "Jaguncinho", telefone: "21 981710022", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Suelen, Ronaldo e família", apelido: "Suelen", telefone: "21 987221000", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Nicolas, Rafa e Laura", apelido: "Nicolas", telefone: "21 988928372", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Leonardo (Leo)", apelido: "Leo", telefone: "21 980406162", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Rodrigo (Mineiro), Mariana e Bê", apelido: "Mineiro", telefone: "21 993766142", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "João e Mariah", apelido: "João", telefone: "21 968590999", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Rafael (Bubble) e Luísa", apelido: "Bubble", telefone: "21 998092850", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Caroline (Carol)", apelido: "Carol", telefone: "21 982848989", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Paula, Pedro, Maria e Olívia", apelido: "Paula", telefone: "21 972122023", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Aline e Mariah", apelido: "Aline", telefone: "21 997616159", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Carina, Danilo, Catarina e Caetano", apelido: "Carina", telefone: "21 964884685", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Luiz Eduardo (Billows)", apelido: "Billows", telefone: "21 991181846", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Chenkel, Bel e Sophia", apelido: "Chenkel", telefone: "21 997783027", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Nikolas e Jordana", apelido: "Nikolas", telefone: "21 969285353", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Beatriz", apelido: "Beatriz", telefone: "21 993528551", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Luiz Eduardo Muniz", apelido: "Luiz", telefone: "61 982400068", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Guilherme (Guido) e Gabriel", apelido: "Guido", telefone: "21 996192121", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tassia", apelido: "Tassia", telefone: "21 968134621", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Hanna, Thiago, Cecília e Thomas", apelido: "Hanna", telefone: "21 988382598", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Lívia, Mariah, Malu e Pedrinho", apelido: "Lívia", telefone: "21 991787979", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Keli, Cauã e Gabriel", apelido: "Keli", telefone: "21 976755879", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Jordana e Lívia", apelido: "Jordana", telefone: "21 981863601", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Suellen (Su)", apelido: "Su", telefone: "21 979836420", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Danielle (Magra)", apelido: "Magra", telefone: "21 996099990", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Daniela, Carim, Gabriel e Christian", apelido: "Daniela", telefone: "21 991850748", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Manoela, Chris, Mia e Oliver", apelido: "Manoela", telefone: "21 992928383", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Magda e Francisco", apelido: "Magda", telefone: "21 979164546", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Bruna, Nicolle, Rodolfo e Vincenzo", apelido: "Bruna", telefone: "21 980026434", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Vó Gina", apelido: "Vó", telefone: "21 999871224", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tia Maninha", apelido: "Tia", telefone: "21 965318237", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Fátima", apelido: "Fátima", telefone: "21 983160028", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "João e Stephanie", apelido: "João", telefone: "21 983160259", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Odenir e Solange", apelido: "Odenir", telefone: "21 964264229", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Celso e Heloísa", apelido: "Celso", telefone: "21 999824200", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tia Regina e Francisco", apelido: "Tia", telefone: "21 996221869", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Marceu e Adriana", apelido: "Marceu", telefone: "21 999184295", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Teresa Cristina", apelido: "Teresa", telefone: "21 988887769", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Pedro (Pedrão) e Mariana", apelido: "Pedrão", telefone: "21 999206680", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Vinícius e Cláudia", apelido: "Vinícius", telefone: "21 999520098", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Bel", apelido: "Bel", telefone: "21 995301058", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Lanna e Arthur", apelido: "Lanna", telefone: "21 985762367", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Milton, Rose, Aninha e Raissa", apelido: "Milton", telefone: "21 995414941", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tio Paulinho e Soraya", apelido: "Tio", telefone: "61 984489899", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Carlos Alexandre (Kaká) e Tia Irone", apelido: "Kaká", telefone: "27 998490101", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tio Beto", apelido: "Tio", telefone: "27 998489357", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tio Lidi e Tia Tânia", apelido: "Tio", telefone: "27 996243913", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Alex e família", apelido: "Alex", telefone: "21 993841891", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Cadu e família", apelido: "Cadu", telefone: "21 984573791", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Georgia e Família", apelido: "Georgia", telefone: "21 999298959", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Priscila e Caio", apelido: "Priscila", telefone: "21 988492964", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Fernanda e Família", apelido: "Fernanda", telefone: "21 994094573", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Tio Daniel, Tia Carla, Victor e Giullia", apelido: "Tio", telefone: "21 988202953", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tia Deca e Tio Umberto", apelido: "Tia", telefone: "21 985853580", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tia Katia e Victoria", apelido: "Tia", telefone: "21 976190196", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tio Nico e Família", apelido: "Tio", telefone: "21 991255176", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Denis, Ciça e Leon", apelido: "Denis", telefone: "21 997695506", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tia Dedé", apelido: "Tia", telefone: "21 971232380", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Tia Cristina", apelido: "Tia", telefone: "24 999150455", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" }
   ]
 
-  const sendWebhook = async (data: { found: boolean; name?: string; item?: string; searchTerm?: string }) => {
+
+  const sendWebhook = async (data: { found: boolean; name?: string; telefone?: string; item?: string; searchTerm?: string }) => {
     try {
       // Só enviar webhook quando o presente for encontrado
       if (data.found) {
@@ -107,6 +109,7 @@ export default function BabyShowerPage() {
           },
           body: JSON.stringify({
             nome: data.name,
+            telefone: data.telefone,
             produto: data.item,
             horario: new Date().toLocaleString('pt-BR', {
               timeZone: 'America/Sao_Paulo',
@@ -195,6 +198,7 @@ export default function BabyShowerPage() {
         searchTerm: searchInput.trim(),
         found: true,
         name: foundGift.nome,
+        telefone: foundGift.telefone,
         item: foundGift.item
       })
     } else if (foundGifts.length > 1) {
@@ -225,6 +229,7 @@ export default function BabyShowerPage() {
       searchTerm: searchInput.trim(),
       found: true,
       name: selectedGift.nome,
+      telefone: selectedGift.telefone,
       item: selectedGift.item
     })
   }
@@ -463,7 +468,7 @@ export default function BabyShowerPage() {
                       </div>
                     ) : (
                       <div className="space-y-1">
-                        <div className="text-lg">😊</div>
+                        <div className="text-lg">🤦🏻‍♀️</div>
                         <p className="text-xs md:text-sm font-semibold text-orange-800">
                           Nome não encontrado. Tente apenas seu primeiro nome ou apelido.
                         </p>
