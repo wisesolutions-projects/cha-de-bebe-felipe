@@ -21,56 +21,76 @@ export default function BabyShowerPage() {
   const [showConfetti, setShowConfetti] = useState(false)
 
   const giftList: GiftItem[] = [
-    { nome: "Ana", apelido: "Aninha", item: "Fralda P" },
-    { nome: "Bruno", apelido: "Bruninho", item: "Pomada antiassaduras" },
-    { nome: "Camila", apelido: "Mila", item: "Fralda M" },
-    { nome: "Daniel", apelido: "Dani", item: "Lenços umedecidos" },
-    { nome: "Elisa", apelido: "Lili", item: "Fralda G" },
-    { nome: "Felipe", apelido: "Lipe", item: "Sabonete líquido infantil" },
-    { nome: "Gabriela", apelido: "Gabi", item: "Fralda RN" },
-    { nome: "Henrique", apelido: "Kike", item: "Manta de bebê" },
-    { nome: "Isabela", apelido: "Isa", item: "Fralda P" },
-    { nome: "João", apelido: "Joãozinho", item: "Toalhas de boca" },
-    { nome: "Karla", apelido: "Kaká", item: "Fralda PP" },
-    { nome: "Leonardo", apelido: "Léo", item: "Pomada de assaduras" },
-    { nome: "Mariana", apelido: "Mari", item: "Fralda M" },
-    { nome: "Nicolas", apelido: "Nico", item: "Chupetas" },
-    { nome: "Olivia", apelido: "Livi", item: "Fralda G" },
-    { nome: "Pedro", apelido: "Pedrinho", item: "Paninhos de boca" },
-    { nome: "Rafaela", apelido: "Rafa", item: "Fralda RN" },
-    { nome: "Samuel", apelido: "Samu", item: "Kit higiene" },
-    { nome: "Tatiana", apelido: "Tati", item: "Fralda P" },
-    { nome: "Victor", apelido: "Vitinho", item: "Termômetro digital" },
-    { nome: "Amanda", apelido: "Mandy", item: "Fralda G" },
-    { nome: "Bernardo", apelido: "Bê", item: "Talco hipoalergênico" },
-    { nome: "Clara", apelido: "Clarinha", item: "Fralda M" },
-    { nome: "Diego", apelido: "Didi", item: "Escova de cabelo macia" },
-    { nome: "Fernanda", apelido: "Fê", item: "Fralda RN" },
-    { nome: "Gustavo", apelido: "Guga", item: "Toalhinha com capuz" },
-    { nome: "Helena", apelido: "Lelê", item: "Fralda G" },
-    { nome: "Igor", apelido: "Iggy", item: "Kit de mamadeiras" },
-    { nome: "Juliana", apelido: "Juju", item: "Fralda PP" },
-    { nome: "Kauã", apelido: "Kau", item: "Babadores" },
-    { nome: "Larissa", apelido: "Lari", item: "Fralda P" },
-    { nome: "Marcelo", apelido: "Celo", item: "Pratinho e colher de bebê" },
-    { nome: "Natália", apelido: "Nati", item: "Fralda M" },
-    { nome: "Otávio", apelido: "Tavinho", item: "Porta chupeta" },
-    { nome: "Patrícia", apelido: "Paty", item: "Fralda G" },
-    { nome: "Rodrigo", apelido: "Digo", item: "Kit de cuidados com unhas" },
-    { nome: "Sabrina", apelido: "Sasa", item: "Fralda RN" },
-    { nome: "Thiago", apelido: "Thi", item: "Protetores de seio para amamentação" },
-    { nome: "Vanessa", apelido: "Vany", item: "Fralda M" },
-    { nome: "William", apelido: "Will", item: "Termômetro de banho" },
-    { nome: "Bianca", apelido: "Bia", item: "Fralda P" },
-    { nome: "Cristiano", apelido: "Cris", item: "Álcool 70% para higiene" },
-    { nome: "Daniela", apelido: "Dany", item: "Fralda PP" },
-    { nome: "Everton", apelido: "Evinho", item: "Cobertorzinho leve" },
-    { nome: "Fabiana", apelido: "Fabi", item: "Fralda G" },
-    { nome: "Guilherme", apelido: "Gui", item: "Talas de fraldas descartáveis" },
-    { nome: "Heloísa", apelido: "Helô", item: "Fralda RN" },
-    { nome: "Jonas", apelido: "Jô", item: "Lençol para berço" },
-    { nome: "Lívia", apelido: "Livi", item: "Fralda P" },
-    { nome: "Miguel", apelido: "Migs", item: "Sapatinhos de bebê" }
+    { nome: "Gian Giannotti", apelido: "Gianzinho", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Mariana Monteiro Delboni", apelido: "Mariana", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Cristina Delboni", apelido: "Cristina", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Irineu Delboni", apelido: "Irineu", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Vanessa, Antônio e Benjamin", apelido: "Vanessa", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Jessica, Ricardo e Daniel", apelido: "Jessica", item: "FRALDA HUGGIES RN + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Fernando, Vivi e Fernandinho", apelido: "Fernando", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Eduardo", apelido: "Borracha", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Gustavo", apelido: "Cabeça", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Júnior e Família", apelido: "Júnior", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Felipe", apelido: "Catatau", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Pedro", apelido: "Pedrinho Neb", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Rodrigo", apelido: "Jaguncinho", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Suelen, Ronaldo e família", apelido: "Suelen", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Nicolas, Rafa e Laura", apelido: "Nicolas", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Leonardo", apelido: "Leo", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Rodrigo", apelido: "Mineiro", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "João e Mariah", apelido: "João", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Rafael", apelido: "Bubble", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Caroline", apelido: "Carol", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Paula, Pedro, Maria e Olívia", apelido: "Paula", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Aline e Mariah", apelido: "Aline", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Carina, Danilo, Catarina e Caetano", apelido: "Carina", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Luiz Eduardo", apelido: "Billows", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Chenkel, Bel e Sophia", apelido: "Chenkel", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Nikolas e Jordana", apelido: "Nikolas", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Beatriz", apelido: "Beatriz", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Luiz Eduardo Muniz", apelido: "Luiz", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Guilherme", apelido: "Guido", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tassia", apelido: "Tassia", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Hanna, Thiago, Cecília e Thomas", apelido: "Hanna", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Lívia, Mariah, Malu e Pedrinho", apelido: "Lívia", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Keli, Cauã e Gabriel", apelido: "Keli", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Jordana e Lívia", apelido: "Jordana", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Suellen", apelido: "Su", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Danielle", apelido: "Magra", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Daniela, Carim, Gabriel e Christian", apelido: "Daniela", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Manoela, Chris, Mia e Oliver", apelido: "Manoela", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Magda e Francisco", apelido: "Magda", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Bruna, Nicolle, Rodolfo e Vincenzo", apelido: "Bruna", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Vó Gina", apelido: "Vó", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tia Maninha", apelido: "Tia", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Fátima", apelido: "Fátima", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "João e Stephanie", apelido: "João", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Odenir e Solange", apelido: "Odenir", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Celso e Heloísa", apelido: "Celso", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tia Regina e Francisco", apelido: "Tia", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Marceu e Adriana", apelido: "Marceu", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Teresa Cristina", apelido: "Teresa", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Pedro", apelido: "Pedrão", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Vinícius e Cláudia", apelido: "Vinícius", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Bel", apelido: "Bel", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Lanna e Arthur", apelido: "Lanna", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Milton, Rose, Aninha e Raissa", apelido: "Milton", item: "FRALDA PAMPERS RN PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tio Paulinho e Soraya", apelido: "Tio", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Carlos Alexandre", apelido: "Kaká", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tio Beto", apelido: "Tio", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tio Lidi e Tia Tânia ", apelido: "Tio", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Alex e família", apelido: "Alex", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Cadu e família", apelido: "Cadu", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Georgia e Família", apelido: "Georgia", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Priscila e Caio ", apelido: "Priscila", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Fernanda e Família", apelido: "Fernanda", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+    { nome: "Tio Daniel, Tia Carla, Victor e Giullia", apelido: "Tio", item: "FRALDA PAMPERS P PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tia Deca e Tio Umberto", apelido: "Tia", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tia Katia e Victoria ", apelido: "Tia", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tio Nico e Família", apelido: "Tio", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Denis, Ciça e Leon", apelido: "Denis", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tia Dedé", apelido: "Tia", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+    { nome: "Tia Cristina ", apelido: "Tia", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" }
   ]
 
   const sendWebhook = async (data: { found: boolean; name?: string; item?: string; searchTerm?: string }) => {
@@ -102,6 +122,15 @@ export default function BabyShowerPage() {
     }
   }
 
+  // Normalize string by removing accents and converting to lowercase
+  const normalizeString = (str: string) => {
+    return str
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove diacritics (accents)
+      .trim()
+  }
+
   const handleSearch = async () => {
     if (!searchInput.trim()) return
 
@@ -112,10 +141,10 @@ export default function BabyShowerPage() {
     // Simulate loading for better UX
     await new Promise(resolve => setTimeout(resolve, 300))
 
-    const searchTerm = searchInput.trim().toLowerCase()
+    const searchTerm = normalizeString(searchInput)
     const foundGift = giftList.find(gift =>
-      gift.nome.toLowerCase() === searchTerm ||
-      gift.apelido.toLowerCase() === searchTerm
+      normalizeString(gift.nome) === searchTerm ||
+      normalizeString(gift.apelido) === searchTerm
     )
 
     if (foundGift) {
@@ -151,33 +180,68 @@ export default function BabyShowerPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5F5F0] relative overflow-hidden">
-      {/* Background Image - Full */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/background.jpg"
-          alt="Beach background"
-          className="w-full h-full object-cover opacity-95"
-        />
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-[#E8F5F9] via-[#F0F8FF] to-[#E8F5F9] relative overflow-hidden">
+      {/* Animated Background Gradient */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#E8F5F9] via-[#F0F8FF] to-[#D4E8F1] animate-gradient-slow opacity-60"></div>
 
-      {/* Beach Decorative Elements */}
-      <div className="absolute inset-0 pointer-events-none z-5">
-        {/* Sand with Palm Tree and Surfboards - Bottom Left */}
-        <div className="absolute bottom-0 left-0 w-[350px] h-[250px] md:w-[500px] md:h-[350px]">
-          <img
-            src="/sand.png"
-            alt="Beach sand with palm tree"
-            className="w-full h-full object-contain"
-          />
+      {/* Sky Elements - Birds and Planes */}
+      <div className="absolute inset-0 pointer-events-none z-1 overflow-hidden">
+        {/* Flying Birds (Seagulls) with Wing Flapping */}
+        <div className="absolute top-[15%] animate-bird-fly-1">
+          <div className="relative w-8 h-4">
+            {/* Left wing - animated */}
+            <div className="absolute left-0 w-4 h-1 bg-gray-400/60 rounded-full origin-right animate-wing-flap-left"></div>
+            {/* Body */}
+            <div className="absolute left-1/2 top-1/2 w-1 h-1 bg-gray-500/70 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            {/* Right wing - animated */}
+            <div className="absolute right-0 w-4 h-1 bg-gray-400/60 rounded-full origin-left animate-wing-flap-right"></div>
+          </div>
         </div>
 
-        {/* Wave - Bottom Right with Animation */}
-        <div className="absolute bottom-0 right-0 w-[400px] h-[280px] md:w-[550px] md:h-[380px] animate-wave-gentle">
+        <div className="absolute top-[25%] animate-bird-fly-2" style={{animationDelay: '3s'}}>
+          <div className="relative w-6 h-3">
+            <div className="absolute left-0 w-3 h-0.5 bg-gray-400/50 rounded-full origin-right animate-wing-flap-left"></div>
+            <div className="absolute left-1/2 top-1/2 w-0.5 h-0.5 bg-gray-500/60 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute right-0 w-3 h-0.5 bg-gray-400/50 rounded-full origin-left animate-wing-flap-right"></div>
+          </div>
+        </div>
+
+        <div className="absolute top-[10%] animate-bird-fly-3" style={{animationDelay: '7s'}}>
+          <div className="relative w-7 h-3">
+            <div className="absolute left-0 w-3.5 h-0.5 bg-gray-400/55 rounded-full origin-right animate-wing-flap-left"></div>
+            <div className="absolute left-1/2 top-1/2 w-0.5 h-0.5 bg-gray-500/65 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute right-0 w-3.5 h-0.5 bg-gray-400/55 rounded-full origin-left animate-wing-flap-right"></div>
+          </div>
+        </div>
+
+        {/* Small clouds drifting */}
+        <div className="absolute top-[12%] left-[20%] animate-cloud-drift-1">
+          <div className="w-16 h-6 bg-white/40 rounded-full blur-sm"></div>
+        </div>
+        <div className="absolute top-[20%] right-[30%] animate-cloud-drift-2">
+          <div className="w-20 h-7 bg-white/35 rounded-full blur-sm"></div>
+        </div>
+        <div className="absolute top-[18%] left-[60%] animate-cloud-drift-3">
+          <div className="w-14 h-5 bg-white/30 rounded-full blur-sm"></div>
+        </div>
+
+        {/* Floating Bubbles/Particles */}
+        <div className="absolute top-[10%] left-[15%] w-3 h-3 bg-blue-200/30 rounded-full animate-float-bubble-1"></div>
+        <div className="absolute top-[30%] left-[75%] w-2 h-2 bg-blue-300/40 rounded-full animate-float-bubble-2"></div>
+        <div className="absolute top-[50%] left-[25%] w-4 h-4 bg-blue-200/25 rounded-full animate-float-bubble-3"></div>
+        <div className="absolute top-[70%] right-[20%] w-3 h-3 bg-blue-300/35 rounded-full animate-float-bubble-4"></div>
+        <div className="absolute top-[20%] right-[40%] w-2 h-2 bg-blue-200/30 rounded-full animate-float-bubble-1" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-[60%] left-[60%] w-3 h-3 bg-blue-300/30 rounded-full animate-float-bubble-2" style={{animationDelay: '1s'}}></div>
+      </div>
+
+      {/* Decorative Elements Layer */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Complete Beach Scene - Full Width at Bottom with Subtle Animation */}
+        <div className="absolute bottom-0 left-0 right-0 w-full animate-wave-subtle">
           <img
-            src="/wave.png"
-            alt="Ocean wave"
-            className="w-full h-full object-contain"
+            src="/beach-with-clouds.png"
+            alt="Beach scene with palm tree, waves and clouds"
+            className="w-full h-auto object-cover object-bottom"
           />
         </div>
       </div>
@@ -194,39 +258,43 @@ export default function BabyShowerPage() {
         </div>
       )}
 
-      <div className="container mx-auto px-4 py-8 relative z-20">
-        {/* Hero Section */}
-        <div className="text-center mb-16 pt-8 relative z-20">
-          {/* Baby on Board Title Image */}
-          <div className="relative mb-8">
+      <div className="container mx-auto px-4 py-4 relative z-20">
+        {/* Baby on Board Title - Floating Animation + Shine Effect */}
+        <div className="text-center pt-4 md:pt-6 mb-4">
+          <div className="relative inline-block">
             <img
               src="/babyonboard.png"
               alt="Baby on Board"
-              className="w-full max-w-2xl mx-auto animate-fade-in-down"
+              className="w-full max-w-md md:max-w-xl mx-auto animate-float-title drop-shadow-2xl"
             />
+            {/* Shine overlay effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine pointer-events-none"></div>
           </div>
+        </div>
 
+        {/* Hero Section */}
+        <div className="text-center mb-6">
           {/* Baby Name */}
-          <div className="mb-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#7BA8BC] px-6 py-2 animate-fade-in-up">
+          <div className="mb-4">
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#7BA8BC] px-4 py-1 animate-fade-in-up">
               Baby Monteiro Delboni 💙
             </h2>
           </div>
 
-          {/* Event Details Card with Beach Style */}
-          <div className="max-w-lg mx-auto bg-white/90 backdrop-blur-md rounded-3xl shadow-xl p-8 border-2 border-[#A8C9D8]/50 transform hover:scale-105 transition-all duration-500 animate-card-entrance">
-            <div className="space-y-5">
-              <div className="flex items-center justify-center gap-3">
-                <span className="text-3xl">📅</span>
-                <span className="text-2xl md:text-3xl font-bold text-[#5A8CA3]">16/11 - 14h</span>
+          {/* Event Details Card - Enhanced Glassmorphism */}
+          <div className="max-w-sm mx-auto bg-white/70 backdrop-blur-md rounded-xl shadow-lg p-3 md:p-4 border border-white/40 transition-all duration-500 animate-card-entrance hover:shadow-xl hover:scale-105 hover:bg-white/80 group">
+            <div className="space-y-2">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-lg md:text-xl">📅</span>
+                <span className="text-base md:text-xl font-bold text-[#5A8CA3]">16/11 - 14h</span>
               </div>
-              <div className="flex items-center justify-center gap-3">
-                <span className="text-3xl">📍</span>
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-lg md:text-xl">📍</span>
                 <a
                   href="https://share.google/paFdm3ZPtXyhYeyCw"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg md:text-xl text-[#5A8CA3] text-center leading-relaxed hover:text-[#4A7A93] hover:underline transition-all duration-300 cursor-pointer font-medium"
+                  className="text-xs md:text-base text-[#5A8CA3] text-center leading-tight hover:text-[#4A7A93] hover:underline transition-all duration-300 cursor-pointer font-medium"
                 >
                   Salão de festas condomínio<br />San Filippo
                 </a>
@@ -236,25 +304,25 @@ export default function BabyShowerPage() {
 
         </div>
 
-        {/* Gift Finder Section */}
-        <div className="max-w-2xl mx-auto">
-          <div className="relative">
-            {/* Soft border glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#A8C9D8] via-[#D4E8F1] to-[#A8C9D8] rounded-3xl blur opacity-40 animate-border-glow-soft"></div>
-            <div className="relative bg-white/90 backdrop-blur-lg rounded-3xl shadow-xl p-8 md:p-12 border-2 border-[#A8C9D8]/60 animate-section-entrance">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl md:text-4xl font-bold text-[#5A8CA3] mb-4">
+        {/* Gift Finder Section - Premium Glassmorphism */}
+        <div className="max-w-md mx-auto mb-6">
+          <div className="relative group">
+            {/* Glow effect on hover */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-300/50 to-cyan-300/50 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative bg-white/70 backdrop-blur-md rounded-xl shadow-lg p-3 md:p-4 border border-white/40 animate-section-entrance hover:shadow-xl hover:bg-white/80 transition-all duration-500">
+              <div className="text-center mb-3">
+                <h3 className="text-lg md:text-xl font-bold text-[#5A8CA3] mb-1">
                   🎁 Você está convidado!
                 </h3>
-                <p className="text-lg md:text-xl text-[#5A8CA3]/80 font-medium">
+                <p className="text-xs md:text-sm text-[#5A8CA3]/80 font-medium">
                   Digite seu nome ou apelido abaixo
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-3">
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <svg className="h-5 w-5 text-[#7BA8BC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg className="h-4 w-4 text-[#7BA8BC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </div>
@@ -264,7 +332,7 @@ export default function BabyShowerPage() {
                     onChange={(e) => setSearchInput(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Digite seu nome ou apelido..."
-                    className="w-full pl-12 pr-4 py-4 text-lg text-[#5A8CA3] placeholder:text-[#A8C9D8] border-2 border-[#A8C9D8] rounded-2xl focus:ring-4 focus:ring-[#D4E8F1] focus:border-[#5A8CA3] outline-none transition-all duration-300 bg-white/80 font-medium"
+                    className="w-full pl-10 pr-3 py-2 md:py-3 text-sm md:text-base text-[#5A8CA3] placeholder:text-[#A8C9D8] border border-[#A8C9D8] rounded-lg focus:ring-2 focus:ring-[#D4E8F1] focus:border-[#5A8CA3] outline-none transition-all duration-300 bg-white/80 font-medium"
                     disabled={isLoading}
                   />
                 </div>
@@ -272,11 +340,11 @@ export default function BabyShowerPage() {
                 <button
                   onClick={handleSearch}
                   disabled={isLoading || !searchInput.trim()}
-                  className="group relative w-full py-4 px-8 bg-gradient-to-r from-[#7BA8BC] via-[#5A8CA3] to-[#7BA8BC] hover:from-[#5A8CA3] hover:via-[#4A7A93] hover:to-[#5A8CA3] disabled:from-gray-400 disabled:to-gray-500 text-white text-lg md:text-xl font-bold rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 disabled:scale-100 disabled:cursor-not-allowed animate-gradient-x overflow-hidden"
+                  className="group relative w-full py-2 md:py-3 px-6 bg-gradient-to-r from-[#7BA8BC] via-[#5A8CA3] to-[#7BA8BC] hover:from-[#5A8CA3] hover:via-[#4A7A93] hover:to-[#5A8CA3] disabled:from-gray-400 disabled:to-gray-500 text-white text-sm md:text-base font-bold rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 disabled:scale-100 disabled:cursor-not-allowed animate-gradient-x overflow-hidden"
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center gap-2">
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       Procurando...
                     </div>
                   ) : (
@@ -287,28 +355,28 @@ export default function BabyShowerPage() {
                   )}
                 </button>
 
-                {/* Search Results */}
+                {/* Search Results - SMALLER */}
                 {searchResult && (
-                  <div className={`mt-6 p-6 rounded-2xl text-center transition-all duration-500 transform ${
+                  <div className={`mt-3 p-3 md:p-4 rounded-lg text-center transition-all duration-500 transform ${
                     searchResult.found
-                      ? 'bg-gradient-to-r from-green-100 to-blue-100 border-2 border-green-300 scale-105'
-                      : 'bg-gradient-to-r from-yellow-100 to-orange-100 border-2 border-yellow-300'
+                      ? 'bg-gradient-to-r from-green-100 to-blue-100 border border-green-300 scale-105'
+                      : 'bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-300'
                   }`}>
                     {searchResult.found ? (
-                      <div className="space-y-2">
-                        <div className="text-2xl animate-pulse">✨</div>
-                        <p className="text-lg font-bold text-green-800">
+                      <div className="space-y-1">
+                        <div className="text-lg animate-pulse">✨</div>
+                        <p className="text-xs md:text-sm font-bold text-green-800">
                           {searchResult.name}, você ficou responsável por trazer:
                         </p>
-                        <p className="text-2xl font-bold text-blue-900 bg-white/70 rounded-xl py-2 px-4 inline-block">
+                        <p className="text-base md:text-lg font-bold text-blue-900 bg-white/70 rounded-lg py-1 px-3 inline-block">
                           {searchResult.item}
                         </p>
-                        <div className="text-2xl animate-pulse">✨</div>
+                        <div className="text-lg animate-pulse">✨</div>
                       </div>
                     ) : (
-                      <div className="space-y-2">
-                        <div className="text-2xl">😊</div>
-                        <p className="text-lg font-semibold text-orange-800">
+                      <div className="space-y-1">
+                        <div className="text-lg">😊</div>
+                        <p className="text-xs md:text-sm font-semibold text-orange-800">
                           Nome não encontrado. Por favor, tente novamente com outra grafia.
                         </p>
                       </div>
@@ -320,15 +388,13 @@ export default function BabyShowerPage() {
           </div>
         </div>
 
-        {/* Footer Message */}
-        <div className="text-center mt-16 mb-8">
-          <div className="relative max-w-3xl mx-auto">
-            {/* Soft glow around footer */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-[#A8C9D8]/20 via-[#D4E8F1]/30 to-[#A8C9D8]/20 rounded-3xl blur-xl animate-pulse-soft"></div>
-            <div className="relative bg-white/90 backdrop-blur-lg rounded-3xl p-8 md:p-10 shadow-xl border-2 border-[#A8C9D8]/50 animate-footer-entrance">
-              <p className="text-xl md:text-2xl text-[#5A8CA3] font-medium leading-relaxed">
+        {/* Footer Message - Enhanced */}
+        <div className="text-center mt-6 mb-24 md:mb-6">
+          <div className="relative max-w-md mx-auto group">
+            <div className="relative bg-white/70 backdrop-blur-md rounded-xl p-3 md:p-4 shadow-lg border border-white/40 animate-footer-entrance hover:shadow-xl hover:scale-105 hover:bg-white/80 transition-all duration-500">
+              <p className="text-sm md:text-base text-[#5A8CA3] font-medium leading-snug">
                 Contamos com sua presença para celebrar a chegada do nosso príncipe!
-                <span className="animate-heartbeat inline-block ml-2 text-3xl">💙</span>
+                <span className="animate-heartbeat inline-block ml-1 text-xl">💙</span>
               </p>
             </div>
           </div>
@@ -501,6 +567,129 @@ export default function BabyShowerPage() {
           75% { transform: translateX(-15px) translateY(-3px) scale(1.02); }
         }
 
+        /* Premium Effects Animations */
+        @keyframes gradient-slow {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        @keyframes wave-subtle {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-8px); }
+        }
+        @keyframes float-title {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        @keyframes shine {
+          0% { transform: translateX(-100%) skewX(-15deg); }
+          100% { transform: translateX(200%) skewX(-15deg); }
+        }
+        @keyframes float-bubble-1 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+          50% { transform: translate(20px, -40px) scale(1.2); opacity: 0.6; }
+        }
+        @keyframes float-bubble-2 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+          50% { transform: translate(-25px, -50px) scale(1.3); opacity: 0.7; }
+        }
+        @keyframes float-bubble-3 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+          50% { transform: translate(30px, -45px) scale(1.4); opacity: 0.5; }
+        }
+        @keyframes float-bubble-4 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.35; }
+          50% { transform: translate(-20px, -55px) scale(1.25); opacity: 0.65; }
+        }
+
+        /* Sky Elements Animations */
+        @keyframes bird-fly-1 {
+          0% {
+            left: -10%;
+            transform: translateY(0px) scale(1);
+          }
+          50% {
+            transform: translateY(-20px) scale(1.1);
+          }
+          100% {
+            left: 110%;
+            transform: translateY(10px) scale(1);
+          }
+        }
+        @keyframes bird-fly-2 {
+          0% {
+            right: -10%;
+            transform: translateY(0px) scale(0.8) scaleX(-1);
+          }
+          50% {
+            transform: translateY(-15px) scale(0.9) scaleX(-1);
+          }
+          100% {
+            right: 110%;
+            transform: translateY(5px) scale(0.8) scaleX(-1);
+          }
+        }
+        @keyframes bird-fly-3 {
+          0% {
+            left: -10%;
+            transform: translateY(0px) scale(0.9);
+          }
+          50% {
+            transform: translateY(-25px) scale(1);
+          }
+          100% {
+            left: 110%;
+            transform: translateY(-5px) scale(0.9);
+          }
+        }
+        @keyframes plane-fly {
+          0% {
+            right: -10%;
+            transform: translateY(0px) rotate(-90deg);
+            opacity: 0;
+          }
+          10% {
+            opacity: 0.6;
+          }
+          90% {
+            opacity: 0.6;
+          }
+          100% {
+            right: 120%;
+            transform: translateY(-30px) rotate(-90deg);
+            opacity: 0;
+          }
+        }
+
+        /* Wing Flapping Animation */
+        @keyframes wing-flap-left {
+          0%, 100% {
+            transform: rotate(-15deg) scaleY(1);
+          }
+          50% {
+            transform: rotate(-45deg) scaleY(0.7);
+          }
+        }
+        @keyframes wing-flap-right {
+          0%, 100% {
+            transform: rotate(15deg) scaleY(1);
+          }
+          50% {
+            transform: rotate(45deg) scaleY(0.7);
+          }
+        }
+        @keyframes cloud-drift-1 {
+          0% { transform: translateX(0px); }
+          100% { transform: translateX(100vw); }
+        }
+        @keyframes cloud-drift-2 {
+          0% { transform: translateX(0px); }
+          100% { transform: translateX(-100vw); }
+        }
+        @keyframes cloud-drift-3 {
+          0% { transform: translateX(0px); }
+          100% { transform: translateX(80vw); }
+        }
+
         /* Particle Animations */
         @keyframes particle-1 {
           0% { transform: translateY(100vh) translateX(0px); opacity: 0; }
@@ -618,6 +807,29 @@ export default function BabyShowerPage() {
         .animate-border-glow-soft { animation: border-glow-soft 3s ease-in-out infinite; }
         .animate-fade-in-down { animation: fade-in-down 1s ease-out 0.2s both; }
         .animate-wave-gentle { animation: wave-gentle 6s ease-in-out infinite; }
+
+        /* Premium Effect Classes */
+        .animate-gradient-slow { animation: gradient-slow 15s ease infinite; background-size: 400% 400%; }
+        .animate-wave-subtle { animation: wave-subtle 8s ease-in-out infinite; }
+        .animate-float-title { animation: float-title 6s ease-in-out infinite; }
+        .animate-shine { animation: shine 3s ease-in-out infinite; animation-delay: 2s; }
+        .animate-float-bubble-1 { animation: float-bubble-1 8s ease-in-out infinite; }
+        .animate-float-bubble-2 { animation: float-bubble-2 10s ease-in-out infinite; }
+        .animate-float-bubble-3 { animation: float-bubble-3 12s ease-in-out infinite; }
+        .animate-float-bubble-4 { animation: float-bubble-4 9s ease-in-out infinite; }
+
+        /* Sky Elements Classes */
+        .animate-bird-fly-1 { animation: bird-fly-1 25s linear infinite; }
+        .animate-bird-fly-2 { animation: bird-fly-2 30s linear infinite; }
+        .animate-bird-fly-3 { animation: bird-fly-3 28s linear infinite; }
+        .animate-plane-fly { animation: plane-fly 45s linear infinite; }
+        .animate-cloud-drift-1 { animation: cloud-drift-1 120s linear infinite; }
+        .animate-cloud-drift-2 { animation: cloud-drift-2 150s linear infinite; }
+        .animate-cloud-drift-3 { animation: cloud-drift-3 100s linear infinite; }
+
+        /* Wing Flapping Classes */
+        .animate-wing-flap-left { animation: wing-flap-left 0.6s ease-in-out infinite; }
+        .animate-wing-flap-right { animation: wing-flap-right 0.6s ease-in-out infinite; }
 
         /* Sticker Effect Styles */
         .sticker-element {
