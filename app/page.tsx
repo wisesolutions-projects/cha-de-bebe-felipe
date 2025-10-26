@@ -12,6 +12,7 @@ interface SearchResult {
   found: boolean
   name?: string
   item?: string
+  multipleMatches?: GiftItem[]
 }
 
 export default function BabyShowerPage() {
@@ -19,6 +20,8 @@ export default function BabyShowerPage() {
   const [searchResult, setSearchResult] = useState<SearchResult | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [showConfetti, setShowConfetti] = useState(false)
+  const [multipleMatches, setMultipleMatches] = useState<GiftItem[]>([])
+  const [showSelectionDialog, setShowSelectionDialog] = useState(false)
 
   const giftList: GiftItem[] = [
     { nome: "Gian Giannotti", apelido: "Gianzinho", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
@@ -137,40 +140,66 @@ export default function BabyShowerPage() {
     setIsLoading(true)
     setSearchResult(null)
     setShowConfetti(false)
+    setShowSelectionDialog(false)
 
     // Simulate loading for better UX
     await new Promise(resolve => setTimeout(resolve, 300))
 
     const searchTerm = normalizeString(searchInput)
-    const foundGift = giftList.find(gift =>
+
+    // Find ALL matches, not just the first one
+    const foundGifts = giftList.filter(gift =>
       normalizeString(gift.nome) === searchTerm ||
       normalizeString(gift.apelido) === searchTerm
     )
 
-    if (foundGift) {
+    if (foundGifts.length === 1) {
+      // Only one match - show the result directly
+      const foundGift = foundGifts[0]
       setSearchResult({
         found: true,
         name: foundGift.nome,
         item: foundGift.item
       })
       setShowConfetti(true)
-      // Hide confetti after 3 seconds
       setTimeout(() => setShowConfetti(false), 3000)
 
-      // Enviar webhook com dados do presente encontrado
       await sendWebhook({
         searchTerm: searchInput.trim(),
         found: true,
         name: foundGift.nome,
         item: foundGift.item
       })
+    } else if (foundGifts.length > 1) {
+      // Multiple matches - show selection dialog
+      setMultipleMatches(foundGifts)
+      setShowSelectionDialog(true)
     } else {
+      // No matches
       setSearchResult({
         found: false
       })
     }
 
     setIsLoading(false)
+  }
+
+  const handleSelectMatch = async (selectedGift: GiftItem) => {
+    setShowSelectionDialog(false)
+    setSearchResult({
+      found: true,
+      name: selectedGift.nome,
+      item: selectedGift.item
+    })
+    setShowConfetti(true)
+    setTimeout(() => setShowConfetti(false), 3000)
+
+    await sendWebhook({
+      searchTerm: searchInput.trim(),
+      found: true,
+      name: selectedGift.nome,
+      item: selectedGift.item
+    })
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -355,15 +384,45 @@ export default function BabyShowerPage() {
                   )}
                 </button>
 
+                {/* Multiple Matches Selection Dialog */}
+                {showSelectionDialog && multipleMatches.length > 0 && (
+                  <div className="mt-3 p-3 md:p-4 rounded-lg bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-300 transition-all duration-500 transform scale-105">
+                    <div className="space-y-3">
+                      <div className="text-center">
+                        <div className="text-lg">🤔</div>
+                        <p className="text-xs md:text-sm font-bold text-blue-800">
+                          Encontramos {multipleMatches.length} pessoas com esse nome. Qual delas é você?
+                        </p>
+                      </div>
+                      <div className="space-y-2">
+                        {multipleMatches.map((gift, index) => (
+                          <button
+                            key={index}
+                            onClick={() => handleSelectMatch(gift)}
+                            className="w-full p-3 bg-white/80 hover:bg-white rounded-lg border border-blue-200 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                          >
+                            <p className="text-sm md:text-base font-bold text-blue-900">
+                              {gift.nome}
+                            </p>
+                            <p className="text-xs md:text-sm text-blue-700 mt-1">
+                              Item: {gift.item}
+                            </p>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Search Results - SMALLER */}
-                {searchResult && (
+                {searchResult && !showSelectionDialog && (
                   <div className={`mt-3 p-3 md:p-4 rounded-lg text-center transition-all duration-500 transform ${
                     searchResult.found
                       ? 'bg-gradient-to-r from-green-100 to-blue-100 border border-green-300 scale-105'
                       : 'bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-300'
                   }`}>
                     {searchResult.found ? (
-                      <div className="space-y-1">
+                      <div className="space-y-2">
                         <div className="text-lg animate-pulse">✨</div>
                         <p className="text-xs md:text-sm font-bold text-green-800">
                           {searchResult.name}, você ficou responsável por trazer:
@@ -371,6 +430,11 @@ export default function BabyShowerPage() {
                         <p className="text-base md:text-lg font-bold text-blue-900 bg-white/70 rounded-lg py-1 px-3 inline-block">
                           {searchResult.item}
                         </p>
+                        <div className="mt-2 pt-2 border-t border-green-300">
+                          <p className="text-xs md:text-sm text-green-700 font-medium">
+                            📱 Cheque seu WhatsApp em alguns minutos para receber a confirmação!
+                          </p>
+                        </div>
                         <div className="text-lg animate-pulse">✨</div>
                       </div>
                     ) : (
