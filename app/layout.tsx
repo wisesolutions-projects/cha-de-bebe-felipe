@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     siteName: "Chá de Bebê",
     images: [
       {
-        url: "https://wisesolutions-projects.github.io/cha-de-bebe-felipe/babyonboard.png",
+        url: "https://wisesolutions-projects.github.io/cha-de-bebe-felipe/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Baby on Board - Chá de Bebê",
+        alt: "Chá de Bebê - Baby Monteiro Delboni",
       },
     ],
     locale: "pt_BR",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chá de Bebê - Baby Monteiro Delboni 👶🏻",
     description: "Você está convidado para o chá de bebê! Descubra o que você vai trazer. 16/11 às 14h.",
-    images: ["https://wisesolutions-projects.github.io/cha-de-bebe-felipe/babyonboard.png"],
+    images: ["https://wisesolutions-projects.github.io/cha-de-bebe-felipe/og-image.png"],
   },
 };
 
