@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Chá de Bebê - Baby Monteiro Delboni 👶🏻",
     description: "Você está convidado para o chá de bebê! Descubra o que você vai trazer. 16/11 às 14h.",
-    url: "https://wisesolutions-projects.github.io/cha-de-bebe-felipe/",
+    url: "https://projects.wisesolutions.uk/cha-de-bebe-felipe/",
     siteName: "Chá de Bebê",
     images: [
       {
