@@ -134,6 +134,18 @@ export default function BabyShowerPage() {
       .trim()
   }
 
+  // Check if search term matches as a complete word in the name
+  const matchesName = (name: string, searchTerm: string): boolean => {
+    const normalizedName = normalizeString(name)
+    const normalizedSearch = normalizeString(searchTerm)
+
+    // Split name into words (by space, comma, "e", etc.)
+    const words = normalizedName.split(/[\s,]+/).filter(word => word.length > 0)
+
+    // Check if any word matches the search term exactly
+    return words.some(word => word === normalizedSearch)
+  }
+
   const handleSearch = async () => {
     if (!searchInput.trim()) return
 
@@ -147,10 +159,10 @@ export default function BabyShowerPage() {
 
     const searchTerm = normalizeString(searchInput)
 
-    // Find ALL matches, not just the first one
+    // Find ALL matches - search in both nickname and as word in full name
     const foundGifts = giftList.filter(gift =>
-      normalizeString(gift.nome) === searchTerm ||
-      normalizeString(gift.apelido) === searchTerm
+      normalizeString(gift.apelido) === searchTerm ||
+      matchesName(gift.nome, searchTerm)
     )
 
     if (foundGifts.length === 1) {
