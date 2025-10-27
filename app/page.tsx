@@ -94,7 +94,10 @@ export default function BabyShowerPage() {
   { nome: "Tio Nico e Família", apelido: "Tio", telefone: "21 991255176", item: "FRALDA PAMPERS M PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
   { nome: "Denis, Ciça e Leon", apelido: "Denis", telefone: "21 997695506", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
   { nome: "Tia Dedé", apelido: "Tia", telefone: "21 971232380", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
-  { nome: "Tia Cristina", apelido: "Tia", telefone: "24 999150455", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" }
+  { nome: "Tia Cristina", apelido: "Tia", telefone: "24 999150455", item: "FRALDA PAMPERS G PREMIUM CARE + LENÇO UMEDECIDO PAMPERS OU GRANADO" },
+  { nome: "Juliana Kalil", apelido: "Juliana", telefone: "21 98166-1821", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Renata e Roberta", apelido: "Renata", telefone: "61 981247500", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" },
+  { nome: "Pedro, Renata, Júlia e Gabriel", apelido: "Pedro", telefone: "+1 (305) 680-4174", item: "FRALDA PAMPERS P PREMIUM CARE + POMADA P/ ASSADURA" }
   ]
 
 
